@@ -475,14 +475,24 @@
   });
   $$('.ig-cta a[href="#"]').forEach(function (a) { a.href = IG; a.target = '_blank'; a.rel = 'noopener'; });
 
-  /* ── Cookie: persistir escolha ── */
+  /* ── Cookie: persistir escolha + dismissar de fato ──
+     O CSS aplica `animation: ckup forwards`, cujo fill-mode sobrepõe
+     qualquer transform inline — por isso o banner não sumia ao clicar.
+     Precisamos zerar a animação antes de deslizar o banner pra fora. */
   var ckBox = document.getElementById('ck');
   if (ckBox) {
-    if (store('acqua_ck')) ckBox.style.display = 'none';
-    ['ckok', 'ckno'].forEach(function (id) {
-      var b = document.getElementById(id);
-      if (b) b.addEventListener('click', function () { store('acqua_ck', id === 'ckok' ? 'all' : 'essential'); });
-    });
+    if (store('acqua_ck')) { ckBox.style.animation = 'none'; ckBox.style.display = 'none'; }
+    var dismissCk = function (val) {
+      store('acqua_ck', val);
+      ckBox.style.animation = 'none';
+      ckBox.style.transition = 'transform .45s cubic-bezier(.22,1,.36,1)';
+      ckBox.style.transform = 'translateY(100%)';
+      setTimeout(function () { ckBox.style.display = 'none'; }, 480);
+    };
+    var ckOk = document.getElementById('ckok');
+    var ckNo = document.getElementById('ckno');
+    if (ckOk) ckOk.addEventListener('click', function () { dismissCk('all'); });
+    if (ckNo) ckNo.addEventListener('click', function () { dismissCk('essential'); });
   }
 
   /* ── Newsletter: persistir + feedback (mantém handler original) ── */
