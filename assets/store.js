@@ -7,24 +7,30 @@
   var IG = 'https://www.instagram.com/';
   var FRETE_GRATIS = 399;
 
-  /* ── Catálogo ── */
+  /* ── Catálogo ──────────────────────────────────────────────
+     Dados reais extraídos das fichas técnicas (nome, REF, cores,
+     tamanhos). Imagens: fotos das modelos sem material de uso interno. */
   var CATALOG = [
-    { id: 'biq-cortininha', n: 'Biquíni Cortininha Com Laço', col: 'Coleção Garopaba', cat: 'Biquínis', pr: 349, img: 'images/loira2-e.jpg', tags: 'cortininha laco biquini conjunto', badge: ['pn', 'Novo'], colors: [['Terracota', '#c4693a'], ['Areia', '#e8d9c4'], ['Preto', '#1e1a16']], d: 'Top cortininha com amarração e laço nas costas, forro duplo e proteção UV50+. Modelagem que valoriza o colo sem abrir mão da segurança.' },
-    { id: 'biq-bandeau', n: 'Biquíni Bandeau Argola', col: 'Coleção Maré', cat: 'Biquínis', pr: 319, img: 'images/produto-2.jpg', tags: 'bandeau argola biquini', badge: ['pn', 'Novo'], colors: [['Terracota', '#c4693a'], ['Preto', '#1e1a16'], ['Areia', '#e8d9c4'], ['Bege', '#c9b394']], d: 'Top bandeau com argola central e bojo removível. Tecido canelado de secagem rápida com elasticidade que acompanha o corpo.' },
-    { id: 'biq-meia-taca', n: 'Biquíni Meia Taça Retrô', col: 'Coleção Sol Real', cat: 'Biquínis', pr: 369, img: 'images/modelo1-c.jpg', tags: 'meia taca retro biquini', colors: [['Azul Maré', '#7da4b8'], ['Terracota', '#c4693a']], d: 'Inspiração vintage com sustentação real: taça estruturada, base firme e calcinha de cintura média. Conforto da primeira onda ao pôr do sol.' },
-    { id: 'biq-asa-delta', n: 'Biquíni Asa Delta Canelado', col: 'Coleção Maré', cat: 'Biquínis', pr: 339, img: 'images/modelo1-b.jpg', tags: 'asa delta canelado biquini', badge: ['pl', 'Exclusivo'], colors: [['Azul Maré', '#7da4b8'], ['Areia', '#e8d9c4']], d: 'Calcinha asa delta de cavada alta em tecido canelado premium. Alonga as pernas e marca a cintura com elegância.' },
-    { id: 'biq-hot-pants', n: 'Biquíni Hot Pants Cintura Alta', col: 'Coleção Onda Quente', cat: 'Biquínis', pr: 359, img: 'images/loira2-c.jpg', tags: 'hot pants cintura alta biquini', colors: [['Azul Céu', '#8fb3c9'], ['Preto', '#1e1a16']], d: 'Cintura alta com compressão leve que modela e dá segurança. A queridinha de quem quer conforto sem perder o estilo.' },
-    { id: 'biq-cropped', n: 'Biquíni Cropped Com Mangas', col: 'Coleção Garopaba', cat: 'Biquínis', pr: 389, img: 'images/espanhola-b.jpg', tags: 'cropped mangas conjunto biquini', colors: [['Terracota', '#c4693a'], ['Areia', '#e8d9c4']], d: 'Conjunto cropped com mangas e proteção UV50+ — perfeito para esportes na água e dias longos de praia.' },
-    { id: 'maio-drapeado', n: 'Maiô Drapeado Frente Única', col: 'Coleção Onda Quente', cat: 'Maiôs', pr: 469, img: 'images/produto-1.jpg', tags: 'maio drapeado frente unica body', badge: ['pl', 'Ed. Limitada'], colors: [['Preto Estampado', '#1e1a16'], ['Terracota', '#c4693a']], d: 'Drapeado frontal que esculpe a silhueta, decote frente única e costas abertas em X. Peça de edição limitada.' },
-    { id: 'maio-decote-v', n: 'Maiô Decote V Profundo', col: 'Coleção Maré', cat: 'Maiôs', pr: 429, img: 'images/modelo1-e.jpg', tags: 'maio decote v profundo body', colors: [['Azul Maré', '#7da4b8'], ['Preto', '#1e1a16']], d: 'Decote V profundo com tule de sustentação invisível. Elegância para usar da piscina ao jantar, com saia ou calça.' },
-    { id: 'maio-ombro-so', n: 'Maiô Assimetria Ombro Só', col: 'Coleção Garopaba', cat: 'Maiôs', pr: 449, img: 'images/modelo2-e.jpg', tags: 'maio assimetrico ombro so body', badge: ['pn', 'Novo'], colors: [['Terracota', '#c4693a'], ['Bege', '#c9b394']], d: 'Assimetria de um ombro só com recorte lateral. Modelagem escultural que veste como uma segunda pele.' },
-    { id: 'maio-costas', n: 'Maiô Costas Nuas Clássico', col: 'Coleção Sol Real', cat: 'Maiôs', pr: 459, img: 'images/loira1-e.jpg', tags: 'maio costas nuas classico body', colors: [['Azul Céu', '#8fb3c9'], ['Preto', '#1e1a16']], d: 'Clássico atemporal com costas totalmente nuas e alças finas ajustáveis. O maiô que nunca sai de moda.' },
-    { id: 'saida-kimono', n: 'Kimono Voal Premium', col: 'Coleção Garopaba', cat: 'Saídas', pr: 299, old: 389, img: 'images/loira1-a.jpg', tags: 'kimono voal saida de praia', colors: [['Areia', '#e8d4b8'], ['Terracota', '#c4693a']], d: 'Voal leve com toque de seda, mangas amplas e faixa na cintura. A saída que transforma qualquer biquíni em look completo.' },
-    { id: 'saida-saia', n: 'Saia Trançada Linho Leve', col: 'Coleção Maré', cat: 'Saídas', pr: 329, img: 'images/loira2-c.jpg', tags: 'saia trancada linho saida', badge: ['pn', 'Novo'], colors: [['Linho Cru', '#e8d9c4'], ['Areia', '#c9b394']], d: 'Linho leve com cós trançado à mão e fenda frontal. Respira no calor e seca em minutos.' },
-    { id: 'saida-chemise', n: 'Chemise Oversized Tricot', col: 'Coleção Litoral', cat: 'Saídas', pr: 399, img: 'images/espanhola-c.jpg', tags: 'chemise oversized tricot saida', colors: [['Areia', '#e8d9c4'], ['Off White', '#faf6f0']], d: 'Tricot vazado oversized que vai da praia ao resort. Use aberta, fechada ou amarrada na cintura.' },
-    { id: 'ace-bolsa', n: 'Bolsa Trançada de Palha Natural', col: 'Curadoria Acquamar', cat: 'Acessórios', pr: 229, img: 'images/modelo2-e.jpg', tags: 'bolsa trancada palha acessorio', badge: ['pn', 'Novo'], colors: [['Palha Natural', '#b8a07a']], sizes: ['Único'], d: 'Palha natural trançada à mão por artesãs catarinenses. Forro interno em algodão e espaço para canga, protetor e livro.' },
-    { id: 'ace-oculos', n: 'Óculos Acetato Tartaruga', col: 'Curadoria Acquamar', cat: 'Acessórios', pr: 279, img: 'images/espanhola-a.jpg', tags: 'oculos acetato tartaruga sol acessorio', colors: [['Tartaruga', '#6b5442'], ['Preto', '#1e1a16']], sizes: ['Único'], d: 'Acetato italiano com lentes polarizadas UV400. Design atemporal que combina com todos os formatos de rosto.' },
-    { id: 'ace-canga', n: 'Canga de Algodão Listras Areia', col: 'Estampa Exclusiva', cat: 'Acessórios', pr: 159, img: 'images/loira2-e.jpg', tags: 'canga algodao listras acessorio', colors: [['Areia', '#e8d9c4'], ['Terracota', '#c4693a']], sizes: ['Único'], d: 'Algodão 100% com estampa exclusiva Acquamar e franjas feitas à mão. 1,60m × 1,10m de puro verão.' }
+    // ── BIQUÍNIS ──
+    { id: 'biq-millis-bandeau', n: 'Biquíni Millis Power Bandeau', col: 'Coleção Millis Power', cat: 'Biquínis', ref: '030 001 190 0084', pr: 329, img: 'images/prod-b1.jpg', tags: 'millis power bandeau estampado floral biquini', badge: ['pn', 'Novo'], sizes: ['P', 'M', 'G', 'GG'], colors: [['Penca', '#c2603a'], ['Mimosa Turquesa', '#3aa898'], ['Angra', '#5a7a9a']], d: 'Top bandeau na exclusiva estampa Millis Power, com bojo removível e elástico forrado. Tecido de alta sustentação, secagem rápida e proteção UV50+.' },
+    { id: 'biq-millis-cortininha', n: 'Biquíni Millis Power Cortininha', col: 'Coleção Millis Power', cat: 'Biquínis', ref: '030 001 190 0077', pr: 339, img: 'images/prod-b2.jpg', tags: 'millis power cortininha estampado floral biquini', sizes: ['P', 'M', 'G', 'GG'], colors: [['Angra', '#9a5a4a'], ['Maraú', '#2a3a52'], ['Taípe', '#4a6a88']], d: 'Cortininha de amarração ajustável com aviamento dourado nas alças. Estampa Millis Power assinada pela Acquamar, com forro duplo e ótima cobertura.' },
+    { id: 'biq-cali-cortininha', n: 'Biquíni Cali Cortininha', col: 'Coleção Cali', cat: 'Biquínis', ref: '030 001 198 0005', pr: 299, img: 'images/prod-b3.jpg', tags: 'cali cortininha liso vibrante neon biquini', badge: ['pn', 'Novo'], sizes: ['P', 'M', 'G', 'GG'], colors: [['Verde Limão', '#c4d22a'], ['Violeta', '#7a3aca'], ['Líchia', '#e0455a'], ['Preto', '#1e1a16']], d: 'Cortininha triângulo na linha Cali, em tecido texturizado de cores vibrantes. Amarração no pescoço e nas costas para um caimento sob medida.' },
+    { id: 'biq-cali-bandeau', n: 'Biquíni Cali Bandeau', col: 'Coleção Cali', cat: 'Biquínis', ref: '030 002 198 0011', pr: 309, img: 'images/prod-b4.jpg', tags: 'cali bandeau liso vibrante biquini', sizes: ['P', 'M', 'G', 'GG'], colors: [['Verde Tiffany', '#2fb9a6'], ['Líchia', '#e0455a']], d: 'Bandeau tomara-que-caia com puxador frontal e calcinha de amarração lateral. Textura canelada e cores que são a cara do verão.' },
+    { id: 'biq-cali-tqc', n: 'Biquíni Cali Tomara Que Caia', col: 'Coleção Cali', cat: 'Biquínis', ref: '030 002 198 0016', pr: 319, img: 'images/prod-b5.jpg', tags: 'cali tomara que caia cortininha biquini', sizes: ['P', 'M', 'G', 'GG'], colors: [['Líchia', '#e0455a'], ['Violeta', '#7a3aca'], ['Verde Tiffany', '#2fb9a6'], ['Branco', '#f0e8da'], ['Preto', '#1e1a16']], d: 'Modelagem tomara-que-caia franzida que valoriza o colo, com calcinha cortininha. Disponível em seis cores vibrantes da linha Cali.' },
+    { id: 'biq-lycra-argola', n: 'Biquíni Lycra Argola', col: 'Coleção Lycra', cat: 'Biquínis', ref: '030 002 010 0011', pr: 289, img: 'images/prod-b6.jpg', tags: 'lycra argola liso preto biquini', sizes: ['P', 'M', 'G', 'GG'], colors: [['Preto', '#1e1a16'], ['Roxo', '#6a2a8a'], ['Azul Dark', '#1a2238'], ['Verde Militar', '#4a5a3a']], d: 'Top com detalhe de argola e calcinha de puxador frontal em lycra encorpada. O básico de luxo que veste como uma segunda pele.' },
+    { id: 'biq-lycra-tira', n: 'Biquíni Lycra Tira Fina', col: 'Coleção Lycra', cat: 'Biquínis', ref: '030 002 010 0002', pr: 279, img: 'images/prod-b7.jpg', tags: 'lycra tira fina borboleta liso biquini', sizes: ['P', 'M', 'G', 'GG'], colors: [['Cru', '#e6dcc8'], ['Cinza', '#b0b0b0'], ['Pistache', '#c4d46a']], d: 'Triângulo de tiras finas com acabamento em viés contrastante e calcinha borboleta. Leveza e bronzeado sem marcas.' },
+    // ── MAIÔS ──
+    { id: 'maio-lycra-cavado', n: 'Maiô Lycra Cavado Costas Nuas', col: 'Coleção Lycra', cat: 'Maiôs', ref: '030 005 010 0022', pr: 449, img: 'images/prod-m1.jpg', tags: 'maio lycra cavado costas nuas frente unica body', badge: ['pl', 'Ed. Limitada'], sizes: ['P', 'M', 'G', 'GG'], colors: [['Marrom', '#6b4a2f'], ['Azul Marinho', '#1a2a4a'], ['Preto', '#1e1a16']], d: 'Maiô cavado com decote halter, recortes laterais e costas nuas. Lycra de alta compressão que modela a silhueta com elegância atemporal.' },
+    { id: 'maio-millis-decote', n: 'Maiô Millis Power Decote V', col: 'Coleção Millis Power', cat: 'Maiôs', ref: '030 005 190 0054', pr: 469, img: 'images/prod-m2.jpg', tags: 'maio millis power decote v frente unica estampado body', sizes: ['P', 'M', 'G', 'GG'], colors: [['Oasis', '#3a3a40'], ['Angra', '#5a7a9a'], ['Maraú', '#2a3a52']], d: 'Decote em V transpassado e alças cruzadas nas costas, na estampa exclusiva Millis Power. Sustentação total para curtir da praia ao jantar.' },
+    { id: 'maio-carmel-cruzado', n: 'Maiô Carmel Frente Cruzada', col: 'Coleção Carmel', cat: 'Maiôs', ref: '030 005 215 0056', pr: 459, img: 'images/prod-m3.jpg', tags: 'maio carmel frente cruzada bojo body', badge: ['pn', 'Novo'], sizes: ['P', 'M', 'G', 'GG'], colors: [['Verde Bandeira', '#1f6b4f'], ['Azul Jeans', '#4a6a9a']], d: 'Maiô gola alta com frente cruzada e bojo embutido, em tecido texturizado Carmel. Cobertura generosa e caimento impecável.' },
+    // ── VESTIDOS & SAÍDAS ──
+    { id: 'vestido-fluxy-midi', n: 'Vestido Fluxy Midi Transpassado c/ Cinto', col: 'Coleção Fluxy', cat: 'Saídas', ref: '030 010 009 0157', pr: 389, img: 'images/prod-v1.jpg', tags: 'vestido fluxy midi transpassado cinto saida', badge: ['pl', 'Exclusivo'], sizes: ['P', 'M', 'G', 'GG'], colors: [['Oasis', '#b5604a']], d: 'Vestido midi em viscose Fluxy de toque fluido, decote transpassado com argola e cinto que marca a cintura. Da praia ao pôr do sol sem trocar de look.' },
+    { id: 'vestido-fluxy-fu', n: 'Vestido Fluxy Frente Única', col: 'Coleção Fluxy', cat: 'Saídas', ref: '030 010 009 0158', pr: 369, img: 'images/prod-v2.jpg', tags: 'vestido fluxy frente unica longo saida', sizes: ['P', 'M', 'G', 'GG'], colors: [['Azul Marinho', '#1a2a4a'], ['Preto', '#1e1a16'], ['Verde Militar', '#4a5a3a']], d: 'Vestido longo frente única com decote em V e costas nuas. Tecido Fluxy leve e fresco que acompanha o movimento. Elegância descomplicada.' },
+    { id: 'saia-pareo', n: 'Saia Pareo Microfibra Longa', col: 'Coleção Praia', cat: 'Saídas', ref: '030 006 003 0054', pr: 259, img: 'images/prod-v3.jpg', tags: 'saia pareo microfibra longa estampada saida', sizes: ['Único'], colors: [['Penca', '#c2603a']], d: 'Pareô longo com fenda e amarração lateral em microfibra de secagem rápida. A saída de praia mais versátil — vire saia, vestido ou lenço.' },
+    { id: 'calca-fluxy-pantalona', n: 'Calça Fluxy Pantalona c/ Bolsos', col: 'Coleção Fluxy', cat: 'Saídas', ref: '030 013 009 0168', pr: 329, img: 'images/prod-v4.jpg', tags: 'calca fluxy pantalona bolsos saida', badge: ['pn', 'Novo'], sizes: ['P', 'M', 'G', 'GG'], colors: [['Taípe', '#4a6a88'], ['Marrom', '#6b4a2f']], d: 'Pantalona de cintura alta com cordão e bolsos, em viscose Fluxy. O coringa do guarda-roupa de verão — leve sobre o biquíni ou com regata.' },
+    // ── ACESSÓRIOS ──
+    { id: 'ace-chapeu', n: 'Chapéu de Praia Palha', col: 'Curadoria Acquamar', cat: 'Acessórios', ref: '030 030 017 0023', pr: 189, img: 'images/prod-a1.jpg', tags: 'chapeu praia palha acessorio', sizes: ['Único'], colors: [['Cru / Natural', '#e0d4bc']], d: 'Chapéu de aba larga em palha trançada com fita preta. Proteção e estilo para os dias de sol — dobrável e fácil de levar na mala.' },
+    { id: 'ace-bolsa-boho', n: 'Bolsa Tiracolo Boho', col: 'Curadoria Acquamar', cat: 'Acessórios', ref: '030 025 017 0026', pr: 229, img: 'images/prod-a2.jpg', tags: 'bolsa tiracolo boho palha redonda acessorio', badge: ['pn', 'Novo'], sizes: ['Único'], colors: [['Camelo', '#c89a5a'], ['Bege', '#d4c2a0']], d: 'Bolsa redonda de palha trançada à mão com alça regulável e fecho de borla. Cabe canga, protetor e o essencial para um dia perfeito de praia.' }
   ];
 
   /* ── Utilidades ── */
@@ -273,6 +279,7 @@
       '<div class="acq-md-in">' +
       '  <span class="acq-md-col">' + p.col + ' · ' + p.cat + '</span>' +
       '  <h3 class="acq-md-n">' + p.n + '</h3>' +
+      (p.ref ? '  <p style="font-size:10px;letter-spacing:.18em;color:var(--bege);margin:-6px 0 14px">REF: ' + p.ref + '</p>' : '') +
       '  <p class="acq-md-p">' + (p.old ? '<span class="old">' + brl(p.old) + '</span>' : '') + brl(p.pr) + '</p>' +
       '  <p class="acq-md-d">' + p.d + '</p>' +
       '  <span class="acq-lbl">Cor: <span id="acqPmCor" style="color:var(--moca)">' + pmSel.color + '</span></span>' +
@@ -355,8 +362,40 @@
     });
   });
 
+  /* ── Render dinâmico das grades a partir do catálogo ── */
+  var WISH_SVG = '<svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>';
+  function cardHTML(p) {
+    var light = { '#f0e8da': 1, '#e6dcc8': 1, '#e0d4bc': 1, '#d4c2a0': 1, '#c4d46a': 1, '#c4d22a': 1 };
+    var dots = p.colors.slice(0, 6).map(function (c, i) {
+      var border = light[c[1]] ? ';border:1px solid #c8b99a' : '';
+      return '<div class="dot' + (i === 0 ? ' on' : '') + '" style="background:' + c[1] + border + '" title="' + c[0] + '"></div>';
+    }).join('');
+    var price = (p.old ? '<span class="old">' + brl(p.old) + '</span>' : '') + brl(p.pr);
+    return '<div class="pc rv2 show" data-acq-id="' + p.id + '">' +
+      '<div class="pc-img"><div class="ph"><img src="' + p.img + '" alt="' + p.n + '" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;z-index:0"></div>' +
+      (p.badge ? '<span class="pbdg ' + p.badge[0] + '">' + p.badge[1] + '</span>' : '') +
+      '<button class="wish" aria-label="Favoritar">' + WISH_SVG + '</button>' +
+      '<button class="qadd">Escolher tamanho</button></div>' +
+      '<p class="pc-col">' + p.col + '</p>' +
+      '<h3 class="pc-nm">' + p.n + '</h3>' +
+      '<p class="pc-pr">' + price + '</p>' +
+      '<div class="dots">' + dots + '</div></div>';
+  }
+  var FEATURED = ['biq-millis-bandeau', 'biq-cali-cortininha', 'maio-carmel-cruzado', 'vestido-fluxy-midi', 'biq-cali-tqc', 'maio-lycra-cavado', 'calca-fluxy-pantalona', 'biq-millis-cortininha'];
+  function renderGrids() {
+    $$('[data-acq-grid]').forEach(function (grid) {
+      var key = grid.getAttribute('data-acq-grid');
+      var list = key === 'featured'
+        ? FEATURED.map(byId).filter(Boolean)
+        : CATALOG.filter(function (p) { return p.cat === key; });
+      grid.innerHTML = list.map(cardHTML).join('');
+    });
+  }
+  renderGrids();
+
   /* ── Cards de produto nas páginas ── */
   function cardProduct(card) {
+    if (card.dataset.acqId) return byId(card.dataset.acqId);
     var nm = $('.pc-nm', card);
     return nm ? byName(nm.textContent) : null;
   }
