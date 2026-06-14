@@ -9,7 +9,7 @@
 
   /* ── Catálogo ──────────────────────────────────────────────
      Dados reais extraídos das fichas técnicas (nome, REF, cores,
-     tamanhos). Imagens: fotos das modelos sem material de uso interno. */
+     tamanhos). Imagens: fotos das modelos, recortadas e tratadas p/ a loja. */
   var CATALOG = [
     // ── BIQUÍNIS ──
     { id: 'biq-millis-bandeau', n: 'Biquíni Millis Power Bandeau', col: 'Coleção Millis Power', cat: 'Biquínis', ref: '030 001 190 0084', pr: 329, img: 'images/prod-b1.jpg', tags: 'millis power bandeau estampado floral biquini', badge: ['pn', 'Novo'], sizes: ['P', 'M', 'G', 'GG'], colors: [['Penca', '#c2603a'], ['Mimosa Turquesa', '#3aa898'], ['Angra', '#5a7a9a']], d: 'Top bandeau na exclusiva estampa Millis Power, com bojo removível e elástico forrado. Tecido de alta sustentação, secagem rápida e proteção UV50+.' },
