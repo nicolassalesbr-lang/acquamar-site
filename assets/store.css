@@ -3,6 +3,24 @@
 
 .bdg:empty{display:none}
 
+/* ── Pop-up de confirmação ancorado na sacola ── */
+.acq-pop{position:fixed;z-index:600;width:300px;max-width:calc(100vw - 24px);background:var(--creme,#faf6f0);border:1px solid var(--areia-d,#d4c2a8);box-shadow:0 16px 50px rgba(30,26,22,.22);padding:16px 18px 16px;opacity:0;transform:translateY(-8px) scale(.97);transform-origin:top right;pointer-events:none;transition:opacity .26s cubic-bezier(.22,1,.36,1),transform .26s cubic-bezier(.22,1,.36,1)}
+.acq-pop.show{opacity:1;transform:none;pointer-events:auto}
+.acq-pop::before{content:'';position:absolute;top:-7px;right:22px;width:13px;height:13px;background:var(--creme,#faf6f0);border-left:1px solid var(--areia-d,#d4c2a8);border-top:1px solid var(--areia-d,#d4c2a8);transform:rotate(45deg)}
+.acq-pop-h{display:flex;align-items:center;gap:8px;font-family:var(--sans,sans-serif);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#5a9a5a;margin-bottom:13px;font-weight:500}
+.acq-pop-h svg{width:18px;height:18px;stroke:#5a9a5a;fill:none;stroke-width:2.4;flex:none}
+.acq-pop-it{display:flex;gap:12px;align-items:center;margin-bottom:14px}
+.acq-pop-it img{width:56px;height:72px;object-fit:cover;flex:none}
+.acq-pop-it b{display:block;font-family:var(--serif,Georgia);font-size:15px;font-weight:400;color:var(--escuro,#1e1a16);line-height:1.25;margin-bottom:4px}
+.acq-pop-it i{display:block;font-style:normal;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--bege,#c9b394);margin-bottom:4px}
+.acq-pop-it s{display:block;text-decoration:none;font-size:11px;color:var(--moca,#6b5442)}
+.acq-pop .acq-btn{margin:0 0 8px}
+.acq-pop-cont{display:block;width:100%;text-align:center;background:none;border:none;font-family:var(--sans,sans-serif);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--moca,#6b5442);cursor:pointer;padding:6px;transition:color .2s}
+.acq-pop-cont:hover{color:var(--terra,#c4693a)}
+.bdg.pulse{animation:acqbdg .5s cubic-bezier(.22,1,.36,1)}
+@keyframes acqbdg{0%{transform:scale(1)}40%{transform:scale(1.55)}100%{transform:scale(1)}}
+@media(max-width:760px){.acq-pop{right:12px !important;width:auto;min-width:264px}}
+
 /* Backdrop compartilhado */
 .acq-bk{position:fixed;inset:0;background:rgba(30,26,22,.45);backdrop-filter:blur(2px);z-index:500;opacity:0;pointer-events:none;transition:opacity .35s}
 .acq-bk.open{opacity:1;pointer-events:auto}

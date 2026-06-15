@@ -85,6 +85,7 @@
 
     '<div class="acq-md" id="acqPm" role="dialog"><div class="acq-md-c" id="acqPmC"></div></div>' +
     '<div class="acq-md" id="acqInfo" role="dialog"><div class="acq-md-c solo" id="acqInfoC"></div></div>' +
+    '<div class="acq-pop" id="acqPop" role="status" aria-live="polite"></div>' +
     '<div class="acq-toast" id="acqToast"></div>';
   document.body.appendChild(root);
 
@@ -93,6 +94,7 @@
 
   function openLayer(el) {
     closeLayer();
+    hidePop();
     openEl = el;
     el.classList.add('open');
     bk.classList.add('open');
@@ -122,6 +124,32 @@
     toastTimer = setTimeout(function () { t.classList.remove('show'); }, 2600);
   }
 
+  /* Pop-up de confirmação ancorado no ícone da sacola (sem abrir o painel lateral) */
+  var popTimer;
+  function bagPop(p) {
+    var bag = $('.ib[aria-label="Sacola"]');
+    var pop = $('#acqPop');
+    if (!bag || !pop) return;
+    var r = bag.getBoundingClientRect();
+    pop.style.top = Math.round(r.bottom + 12) + 'px';
+    pop.style.right = Math.max(12, Math.round(window.innerWidth - r.right - 8)) + 'px';
+    var n = cartQty();
+    pop.innerHTML =
+      '<div class="acq-pop-h"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Adicionado à sacola</div>' +
+      '<div class="acq-pop-it"><img src="' + p.img + '" alt="' + p.n + '"/>' +
+      '<div><b>' + p.n + '</b><i>' + n + (n === 1 ? ' item' : ' itens') + ' · ' + brl(cartSubtotal()) + '</i>' +
+      '<s>Ver resumo e finalizar</s></div></div>' +
+      '<button class="acq-btn" id="acqPopView">Ver minha sacola</button>' +
+      '<button class="acq-pop-cont" id="acqPopCont">Continuar comprando</button>';
+    pop.classList.add('show');
+    $$('.bdg').forEach(function (b) { b.classList.remove('pulse'); void b.offsetWidth; b.classList.add('pulse'); });
+    clearTimeout(popTimer);
+    popTimer = setTimeout(function () { pop.classList.remove('show'); }, 4500);
+    $('#acqPopView').addEventListener('click', function () { pop.classList.remove('show'); openLayer($('#acqCart')); });
+    $('#acqPopCont').addEventListener('click', function () { pop.classList.remove('show'); });
+  }
+  function hidePop() { var pop = $('#acqPop'); if (pop) pop.classList.remove('show'); }
+
   /* ── Carrinho ── */
   function cartQty() { return cart.reduce(function (s, i) { return s + i.qty; }, 0); }
   function cartSubtotal() {
@@ -135,8 +163,6 @@
     if (hit) hit.qty += qty;
     else cart.push({ id: id, size: size, color: color, qty: qty });
     saveCart();
-    var p = byId(id);
-    toast('<b>✓</b> ' + p.n + ' na sacola');
   }
 
   function renderBadges() {
@@ -326,7 +352,8 @@
     $('#acqPmAdd').addEventListener('click', function () {
       if (!pmSel.size) { $('.acq-sizes', c).classList.add('err'); return; }
       addToCart(p.id, pmSel.size, pmSel.color, pmSel.qty);
-      openLayer($('#acqCart'));
+      closeLayer();
+      bagPop(p);
     });
     openLayer($('#acqPm'));
   }
