@@ -1,0 +1,103 @@
+/* ════════════════════════════════════════════════════════════
+   Acquamar · Otimizações EXCLUSIVAS de mobile
+   Tudo dentro de @media (max-width) — o desktop NÃO é afetado.
+   Carregado por último para refinar a experiência em telas pequenas.
+   ════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+
+  /* ── Áreas de toque confortáveis (≈44px) ───────────────── */
+  header .nr { gap: 4px; }
+  .ib { width: 44px; height: 44px; justify-content: center; }
+  .ib svg { width: 21px; height: 21px; }
+  .ib .bdg { top: 4px; right: 4px; }
+  /* aumenta a área clicável do hambúrguer sem mudar o visual (content-box + padding) */
+  .hamburger-btn { box-sizing: content-box !important; width: 22px !important; height: 14px !important; padding: 15px 12px !important; margin: -15px -12px !important; }
+
+  /* ── Header um pouco mais compacto ─────────────────────── */
+  nav { height: 60px; padding: 0 16px; }
+  .logo-n { font-size: 21px; letter-spacing: .22em; }
+  .logo-c { font-size: 8px; letter-spacing: .38em; }
+  .ann { font-size: 10px; letter-spacing: .12em; padding: 9px 16px; }
+
+  /* ── Respiro vertical mais enxuto ──────────────────────── */
+  .cats, .prods, .revs, .insta, .nl, .look { padding-top: 46px; padding-bottom: 46px; }
+  section[style*="padding:96px"] { padding: 46px 20px !important; }
+  .s-h { margin-bottom: 32px; }
+  .story-txt { padding: 46px 24px; }
+
+  /* ── Hero equilibrado na primeira dobra ────────────────── */
+  .hero { min-height: auto; }
+  .hero-art .ph { height: 64vw; min-height: 290px; }
+  .hero-txt { padding: 38px 24px 42px; }
+  .h-t { font-size: clamp(40px, 12.5vw, 56px); line-height: 1.0; margin-bottom: 26px; }
+  .h-d { margin-bottom: 30px; max-width: none; }
+  .h-b { flex-wrap: wrap; gap: 12px; }
+
+  /* ── Cards de produto: legibilidade e toque ────────────── */
+  .pgrid { gap: 24px 12px; }
+  .pc-nm { font-size: 16px; line-height: 1.25; }
+  .pc-col { font-size: 9px; }
+  .pc-pr { font-size: 14px; }
+  /* sem hover no touch: favoritar e CTA sempre visíveis */
+  .pc .wish { opacity: 1; width: 38px; height: 38px; }
+  .pc .wish svg { width: 17px; height: 17px; }
+  .pc .qadd { opacity: 1; transform: none; padding: 14px; letter-spacing: .16em; }
+  /* swatches maiores p/ a navegação por cor */
+  .dots { gap: 10px; margin-top: 12px; }
+  .dot { width: 22px; height: 22px; }
+  .dot:hover, .dot.on { outline-offset: -4px; }
+
+  /* ── Botões / CTAs ─────────────────────────────────────── */
+  .btn { padding: 15px 28px; }
+  .arr { padding: 6px 0; }
+
+  /* ── Filtros: chips em faixa rolável (não quebram em pilha) */
+  .filt { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto;
+          -webkit-overflow-scrolling: touch; scrollbar-width: none;
+          margin-left: -20px; margin-right: -20px; padding: 0 20px 6px; }
+  .filt::-webkit-scrollbar { display: none; }
+  .fb { flex: 0 0 auto; }
+
+  /* ── Benefícios: faixa rolável horizontal ──────────────── */
+  .benef { padding: 14px 0; }
+  .benef-in { justify-content: flex-start; flex-wrap: nowrap; overflow-x: auto;
+              gap: 24px; padding: 0 20px; scrollbar-width: none; }
+  .benef-in::-webkit-scrollbar { display: none; }
+  .bi { flex: 0 0 auto; }
+
+  /* ── Categorias: cartões com nome maior ────────────────── */
+  .cname { font-size: 26px; }
+  .cov { padding: 22px 22px; }
+
+  /* ── Newsletter ────────────────────────────────────────── */
+  .nl-t { font-size: clamp(30px, 9vw, 42px); }
+  .nl-f input, .nl-f button { padding: 15px 18px; }
+
+  /* ── Rodapé mais legível ───────────────────────────────── */
+  footer { padding: 44px 20px 28px; }
+  .ft-top { gap: 30px; }
+  .ft-brand p { max-width: none; }
+  .fc ul a, .ft-bot p { font-size: 13px; }
+
+  /* ── Modal de produto: alvos maiores ───────────────────── */
+  .acq-sz { min-width: 48px; padding: 12px 14px; }
+  .acq-md .acq-x { width: 42px; height: 42px; }
+  .acq-md-links a { padding: 4px 0; }
+
+  /* ── Pop-up da sacola ocupa bem a largura ──────────────── */
+  .acq-pop { left: 12px; right: 12px; width: auto; }
+  .acq-pop::before { right: 28px; }
+
+  /* rolagem suave em iOS */
+  html { -webkit-text-size-adjust: 100%; }
+}
+
+/* ── Telas bem estreitas ─────────────────────────────────── */
+@media (max-width: 380px) {
+  .pgrid { gap: 18px 10px; }
+  .h-t { font-size: 40px; }
+  .cname { font-size: 23px; }
+  .s-t { font-size: 32px; }
+  .pc-nm { font-size: 15px; }
+}
