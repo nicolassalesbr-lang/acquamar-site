@@ -14,10 +14,10 @@
     // ── BIQUÍNIS ──
     { id: 'biq-millis-bandeau', n: 'Biquíni Millis Power Bandeau', col: 'Coleção Millis Power', cat: 'Biquínis', ref: '030 001 190 0084', pr: 329, img: 'images/prod-b1.jpg?v=7', tags: 'millis power bandeau estampado floral biquini', badge: ['pn', 'Novo'], sizes: ['P', 'M', 'G', 'GG'], colors: [['Penca', '#c2603a'], ['Mimosa Turquesa', '#3aa898'], ['Angra', '#5a7a9a']], d: 'Top bandeau na exclusiva estampa Millis Power, com bojo removível e elástico forrado. Tecido de alta sustentação, secagem rápida e proteção UV50+.' },
     { id: 'biq-millis-cortininha', n: 'Biquíni Millis Power Cortininha', col: 'Coleção Millis Power', cat: 'Biquínis', ref: '030 001 190 0077', pr: 339, img: 'images/prod-b2.jpg?v=7', tags: 'millis power cortininha estampado floral biquini', sizes: ['P', 'M', 'G', 'GG'], colors: [['Angra', '#9a5a4a'], ['Maraú', '#2a3a52'], ['Taípe', '#4a6a88']], d: 'Cortininha de amarração ajustável com aviamento dourado nas alças. Estampa Millis Power assinada pela Acquamar, com forro duplo e ótima cobertura.' },
-    { id: 'biq-cali-cortininha', n: 'Biquíni Cali Cortininha', col: 'Coleção Cali', cat: 'Biquínis', ref: '030 001 198 0005', pr: 299, img: 'images/prod-b3.jpg?v=7', tags: 'cali cortininha liso vibrante neon biquini', badge: ['pn', 'Novo'], sizes: ['P', 'M', 'G', 'GG'], colors: [['Verde Limão', '#c4d22a'], ['Violeta', '#7a3357'], ['Líchia', '#c8402f'], ['Preto', '#1e1a16']], colorImgs: { 'Verde Limão': 'images/prod-b3.jpg?v=7', 'Violeta': 'images/prod-b3-violeta.jpg?v=7', 'Líchia': 'images/prod-b3-lichia.jpg?v=7' }, d: 'Cortininha triângulo na linha Cali, em tecido texturizado de cores vibrantes. Amarração no pescoço e nas costas para um caimento sob medida. Escolha a cor para ver a peça.' },
-    { id: 'biq-cali-bandeau', n: 'Biquíni Cali Bandeau', col: 'Coleção Cali', cat: 'Biquínis', ref: '030 002 198 0011', pr: 309, img: 'images/prod-b4.jpg?v=7', tags: 'cali bandeau liso vibrante biquini', sizes: ['P', 'M', 'G', 'GG'], colors: [['Verde Tiffany', '#2fb9a6'], ['Líchia', '#d4357a']], colorImgs: { 'Verde Tiffany': 'images/prod-b4.jpg?v=7', 'Líchia': 'images/prod-b4-lichia.jpg?v=7' }, d: 'Bandeau tomara-que-caia com puxador frontal e calcinha de amarração lateral. Textura canelada e cores que são a cara do verão. Escolha a cor para ver a peça.' },
-    { id: 'biq-cali-tqc', n: 'Biquíni Cali Cintura Alta', col: 'Coleção Cali', cat: 'Biquínis', ref: '030 002 198 0016', pr: 319, img: 'images/prod-b5.jpg?v=7', tags: 'cali cintura alta hot pants liso vibrante biquini', sizes: ['P', 'M', 'G', 'GG'], colors: [['Violeta', '#7a3357'], ['Líchia', '#c8402f'], ['Preto', '#1e1a16']], colorImgs: { 'Violeta': 'images/prod-b5.jpg?v=7' }, d: 'Calcinha de cintura alta que modela e dá segurança, com top franzido. Textura canelada da linha Cali — conforto e estilo retrô para o verão.' },
-    { id: 'biq-lycra-argola', n: 'Biquíni Lycra Argola', col: 'Coleção Lycra', cat: 'Biquínis', ref: '030 002 010 0011', pr: 289, img: 'images/prod-b6.jpg?v=7', tags: 'lycra argola liso preto biquini', sizes: ['P', 'M', 'G', 'GG'], colors: [['Preto', '#1e1a16'], ['Roxo', '#6a2a8a'], ['Azul Dark', '#1a2238'], ['Verde Militar', '#4a5a3a']], d: 'Top com detalhe de argola e calcinha de puxador frontal em lycra encorpada. O básico de luxo que veste como uma segunda pele.' },
+    { id: 'biq-cali-cortininha', n: 'Biquíni Cali Cortininha', col: 'Coleção Cali', cat: 'Biquínis', ref: '030 001 198 0005', pr: 299, mob: 1, img: 'images/prod-b3.jpg?v=7', tags: 'cali cortininha liso vibrante neon biquini', badge: ['pn', 'Novo'], sizes: ['P', 'M', 'G', 'GG'], colors: [['Verde Limão', '#c4d22a'], ['Violeta', '#7a3357'], ['Líchia', '#c8402f'], ['Preto', '#1e1a16']], colorImgs: { 'Verde Limão': 'images/prod-b3.jpg?v=7', 'Violeta': 'images/prod-b3-violeta.jpg?v=7', 'Líchia': 'images/prod-b3-lichia.jpg?v=7' }, d: 'Cortininha triângulo na linha Cali, em tecido texturizado de cores vibrantes. Amarração no pescoço e nas costas para um caimento sob medida. Escolha a cor para ver a peça.' },
+    { id: 'biq-cali-bandeau', n: 'Biquíni Cali Bandeau', col: 'Coleção Cali', cat: 'Biquínis', ref: '030 002 198 0011', pr: 309, mob: 1, img: 'images/prod-b4.jpg?v=7', tags: 'cali bandeau liso vibrante biquini', sizes: ['P', 'M', 'G', 'GG'], colors: [['Verde Tiffany', '#2fb9a6'], ['Líchia', '#d4357a']], colorImgs: { 'Verde Tiffany': 'images/prod-b4.jpg?v=7', 'Líchia': 'images/prod-b4-lichia.jpg?v=7' }, d: 'Bandeau tomara-que-caia com puxador frontal e calcinha de amarração lateral. Textura canelada e cores que são a cara do verão. Escolha a cor para ver a peça.' },
+    { id: 'biq-cali-tqc', n: 'Biquíni Cali Cintura Alta', col: 'Coleção Cali', cat: 'Biquínis', ref: '030 002 198 0016', pr: 319, mob: 1, img: 'images/prod-b5.jpg?v=7', tags: 'cali cintura alta hot pants liso vibrante biquini', sizes: ['P', 'M', 'G', 'GG'], colors: [['Violeta', '#7a3357'], ['Líchia', '#c8402f'], ['Preto', '#1e1a16']], colorImgs: { 'Violeta': 'images/prod-b5.jpg?v=7' }, d: 'Calcinha de cintura alta que modela e dá segurança, com top franzido. Textura canelada da linha Cali — conforto e estilo retrô para o verão.' },
+    { id: 'biq-lycra-argola', n: 'Biquíni Lycra Argola', col: 'Coleção Lycra', cat: 'Biquínis', ref: '030 002 010 0011', pr: 289, mob: 1, img: 'images/prod-b6.jpg?v=7', tags: 'lycra argola liso preto biquini', sizes: ['P', 'M', 'G', 'GG'], colors: [['Preto', '#1e1a16'], ['Roxo', '#6a2a8a'], ['Azul Dark', '#1a2238'], ['Verde Militar', '#4a5a3a']], d: 'Top com detalhe de argola e calcinha de puxador frontal em lycra encorpada. O básico de luxo que veste como uma segunda pele.' },
     { id: 'biq-lycra-tira', n: 'Biquíni Lycra Tira Fina', col: 'Coleção Lycra', cat: 'Biquínis', ref: '030 002 010 0002', pr: 279, img: 'images/prod-b7.jpg?v=7', tags: 'lycra tira fina borboleta liso biquini', sizes: ['P', 'M', 'G', 'GG'], colors: [['Cru', '#e6dcc8'], ['Cinza', '#b0b0b0'], ['Pistache', '#c4d46a']], d: 'Triângulo de tiras finas com acabamento em viés contrastante e calcinha borboleta. Leveza e bronzeado sem marcas.' },
     // ── MAIÔS ──
     { id: 'maio-lycra-cavado', n: 'Maiô Cavado Decote Halter', col: 'Coleção Praia', cat: 'Maiôs', pr: 449, img: 'images/prod-m1.jpg?v=7', tags: 'maio cavado decote halter costas nuas recorte frente unica body', badge: ['pl', 'Ed. Limitada'], sizes: ['P', 'M', 'G', 'GG'], colors: [['Marrom', '#6b4a2f'], ['Azul Marinho', '#1a2a4a'], ['Preto', '#1e1a16']], d: 'Maiô cavado com decote halter, recortes laterais e costas nuas. Modela a silhueta com elegância atemporal — da piscina ao pôr do sol.' },
@@ -300,7 +300,7 @@
     var c = $('#acqPmC');
     c.innerHTML =
       '<button class="acq-x" data-close>&times;</button>' +
-      '<div class="acq-md-img"><img src="' + p.img + '" alt="' + p.n + '"/>' +
+      '<div class="acq-md-img">' + imgTag(p, p.img, false) +
       (p.badge ? '<span class="pbdg ' + p.badge[0] + '">' + p.badge[1] + '</span>' : '') + '</div>' +
       '<div class="acq-md-in">' +
       '  <span class="acq-md-col">' + p.col + ' · ' + p.cat + '</span>' +
@@ -334,8 +334,7 @@
         $('#acqPmCor').textContent = pmSel.color;
         // troca a foto principal para a cor selecionada (se houver imagem)
         var im = p.colorImgs && p.colorImgs[pmSel.color];
-        var mi = c.querySelector('.acq-md-img img');
-        if (im && mi) mi.src = im;
+        if (im) swapImg(c.querySelector('.acq-md-img'), p, im);
       });
     });
     $$('.acq-sz', c).forEach(function (b) {
@@ -395,6 +394,24 @@
 
   /* ── Render dinâmico das grades a partir do catálogo ── */
   var WISH_SVG = '<svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>';
+  var IMG_STYLE = 'width:100%;height:100%;object-fit:cover;position:absolute;inset:0;z-index:0';
+  /* URL da variante mobile (recorte 3:4) a partir da URL desktop */
+  function mURL(u) { return u.replace('.jpg', '-m.jpg'); }
+  /* <img> no desktop; <picture> (mobile recortado ≤768px) só p/ produtos com p.mob.
+     Mantém o desktop EXATAMENTE com a imagem original; mobile usa o recorte 3:4. */
+  function imgTag(p, src, lazy, style) {
+    src = src || p.img; style = style || IMG_STYLE;
+    var img = '<img src="' + src + '" alt="' + p.n + '"' + (lazy ? ' loading="lazy"' : '') + ' style="' + style + '">';
+    return p.mob
+      ? '<picture><source media="(max-width:768px)" srcset="' + mURL(src) + '">' + img + '</picture>'
+      : img;
+  }
+  /* troca a imagem (cor) atualizando <source> mobile + <img> desktop */
+  function swapImg(scope, p, deskUrl) {
+    var pic = scope.querySelector('picture');
+    if (pic) { var s = pic.querySelector('source'); if (s) s.srcset = mURL(deskUrl); }
+    var im = scope.querySelector('img'); if (im) im.src = deskUrl;
+  }
   function cardHTML(p) {
     var light = { '#f0e8da': 1, '#e6dcc8': 1, '#e0d4bc': 1, '#d4c2a0': 1, '#c4d46a': 1, '#c4d22a': 1 };
     var dots = p.colors.slice(0, 6).map(function (c, i) {
@@ -403,7 +420,7 @@
     }).join('');
     var price = (p.old ? '<span class="old">' + brl(p.old) + '</span>' : '') + brl(p.pr);
     return '<div class="pc rv2 show" data-acq-id="' + p.id + '">' +
-      '<div class="pc-img"><div class="ph"><img src="' + p.img + '" alt="' + p.n + '" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;z-index:0"></div>' +
+      '<div class="pc-img"><div class="ph">' + imgTag(p, p.img, true) + '</div>' +
       (p.badge ? '<span class="pbdg ' + p.badge[0] + '">' + p.badge[1] + '</span>' : '') +
       '<button class="wish" aria-label="Favoritar">' + WISH_SVG + '</button>' +
       '<button class="qadd">Escolher tamanho</button></div>' +
@@ -459,8 +476,7 @@
         $$('.dot', card).forEach(function (x) { x.classList.remove('on'); });
         d.classList.add('on');
         var im = p.colorImgs && p.colorImgs[d.getAttribute('title')];
-        var ci = $('.pc-img img', card);
-        if (im && ci) ci.src = im;
+        if (im) swapImg($('.pc-img', card), p, im);
       });
     });
   });
