@@ -89,6 +89,13 @@
   .acq-pop { left: 12px; right: 12px; width: auto; }
   .acq-pop::before { right: 28px; }
 
+  /* ── Correções de enquadramento de fotos (corte de cabeças) ─ */
+  .acq-md-img img,
+  .hero-art img,
+  .acq-historia-manifesto img {
+    object-position: center top !important;
+  }
+
   /* rolagem suave em iOS */
   html { -webkit-text-size-adjust: 100%; }
 }
