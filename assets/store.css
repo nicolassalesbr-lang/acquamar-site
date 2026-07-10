@@ -125,6 +125,7 @@
 .acq-sz{min-width:42px;padding:9px 12px;border:1px solid var(--areia-d,#d4c2a8);background:transparent;font-family:var(--sans,sans-serif);font-size:11px;letter-spacing:.1em;color:var(--escuro,#1e1a16);cursor:pointer;transition:all .2s}
 .acq-sz:hover{border-color:var(--escuro,#1e1a16)}
 .acq-sz.on{background:var(--escuro,#1e1a16);color:#fff;border-color:var(--escuro,#1e1a16)}
+.acq-sz.disabled{opacity:0.35;pointer-events:none;text-decoration:line-through;cursor:not-allowed}
 .acq-sizes.err .acq-sz{border-color:#b04a3a;animation:acqshake .3s}
 @keyframes acqshake{25%{transform:translateX(-3px)}75%{transform:translateX(3px)}}
 .acq-md-row{display:flex;gap:12px;align-items:stretch;margin-top:auto}
