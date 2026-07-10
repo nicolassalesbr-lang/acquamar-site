@@ -625,9 +625,10 @@
     
     pmSel = { size: defaultSize, color: defaultColor, qty: 1 };
     var c = $('#acqPmC');
+    var cropClass = (p.id === 'biq-fluxy-0006' || p.id === 'biq-fluxy-0012') ? ' crop-grid' : '';
     c.innerHTML =
       '<button class="acq-x" data-close>&times;</button>' +
-      '<div class="acq-md-img">' + imgTag(p, p.img, false) +
+      '<div class="acq-md-img' + cropClass + '">' + imgTag(p, p.img, false) +
       (p.badge ? '<span class="pbdg ' + p.badge[0] + '">' + p.badge[1] + '</span>' : '') + '</div>' +
       '<div class="acq-md-in">' +
       '  <span class="acq-md-col">' + p.col + ' · ' + p.cat + '</span>' +
@@ -777,8 +778,9 @@
       return '<div class="dot' + (i === 0 ? ' on' : '') + '" style="background:' + c[1] + border + '" title="' + c[0] + '"></div>';
     }).join('');
     var price = (p.old ? '<span class="old">' + brl(p.old) + '</span>' : '') + brl(p.pr);
+    var cropClass = (p.id === 'biq-fluxy-0006' || p.id === 'biq-fluxy-0012') ? ' crop-grid' : '';
     return '<div class="pc rv2 show" data-acq-id="' + p.id + '">' +
-      '<div class="pc-img"><div class="ph">' + imgTag(p, p.img, true) + '</div>' +
+      '<div class="pc-img"><div class="ph' + cropClass + '">' + imgTag(p, p.img, true) + '</div>' +
       (p.badge ? '<span class="pbdg ' + p.badge[0] + '">' + p.badge[1] + '</span>' : '') +
       '<button class="wish" aria-label="Favoritar">' + WISH_SVG + '</button>' +
       '<button class="qadd">Escolher tamanho</button></div>' +
