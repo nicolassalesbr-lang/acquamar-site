@@ -1,0 +1,720 @@
+[
+  {
+    "id": "biq-power-0014",
+    "n": "Millis Power Com Aviamento",
+    "col": "Coleção Millis Power",
+    "cat": "Biquínis",
+    "ref": "030 001 190 0014",
+    "pr": 339,
+    "img": "https://drive.google.com/thumbnail?id=1m7DeW2Em9PnVzshKsy5lIOcmt0ped9ll&sz=w800",
+    "tags": "coleção millis power millis power com aviamento biquini angra maraú mimosa turquesa paraty blue",
+    "sizes": [
+      "P",
+      "M"
+    ],
+    "colors": [
+      [
+        "Angra",
+        "#5a7a9a"
+      ],
+      [
+        "Maraú",
+        "#2a3a52"
+      ],
+      [
+        "Mimosa Turquesa",
+        "#3aa898"
+      ],
+      [
+        "Paraty Blue",
+        "#4a6a88"
+      ]
+    ],
+    "colorImgs": {
+      "Angra": "https://drive.google.com/thumbnail?id=1m7DeW2Em9PnVzshKsy5lIOcmt0ped9ll&sz=w800",
+      "Maraú": "https://drive.google.com/thumbnail?id=1O7t5gP-6uyFf5ScZOHLWvu_Y_Kpnn4cB&sz=w800",
+      "Mimosa Turquesa": "https://drive.google.com/thumbnail?id=1QwDpS0spj3d9PHE-yv6epuw_KoA_fymv&sz=w800",
+      "Paraty Blue": "https://drive.google.com/thumbnail?id=1RWEmrQWhNKvggXz0PG0CCDRFi8ShD9yW&sz=w800"
+    },
+    "stock": {
+      "Angra": {
+        "P": 1
+      },
+      "Maraú": {
+        "M": 3,
+        "P": 4
+      },
+      "Mimosa Turquesa": {
+        "M": 1
+      },
+      "Paraty Blue": {
+        "P": 4
+      }
+    },
+    "d": "Millis Power Com Aviamento da Coleção Millis Power. Modelagem confortável e anatômica desenvolvida em tecido premium com proteção UV50+, secagem rápida e forro duplo de alta qualidade."
+  },
+  {
+    "id": "biq-power-0012",
+    "n": "Millis Power Cortininha Com Regulador",
+    "col": "Coleção Millis Power",
+    "cat": "Biquínis",
+    "ref": "030 001 190 0012",
+    "pr": 339,
+    "img": "https://drive.google.com/thumbnail?id=1BzkRflIrwLjDNnpEoO2adMJLzNqxbgYP&sz=w800",
+    "tags": "coleção millis power millis power cortininha com regulador biquini angra pantera paraty blue taípe",
+    "sizes": [
+      "P",
+      "M",
+      "G"
+    ],
+    "colors": [
+      [
+        "Angra",
+        "#5a7a9a"
+      ],
+      [
+        "Pantera",
+        "#e27a53"
+      ],
+      [
+        "Paraty Blue",
+        "#4a6a88"
+      ],
+      [
+        "Taípe",
+        "#8c7b6d"
+      ]
+    ],
+    "colorImgs": {
+      "Angra": "https://drive.google.com/thumbnail?id=1BzkRflIrwLjDNnpEoO2adMJLzNqxbgYP&sz=w800",
+      "Pantera": "https://drive.google.com/thumbnail?id=1xqZZ7ouCcg9WbviUqeZrJJxAnUl5QH06&sz=w800",
+      "Paraty Blue": "https://drive.google.com/thumbnail?id=1H4S_rOTmqh9BdXFK6lBhtFZnugw3cz9t&sz=w800",
+      "Taípe": "https://drive.google.com/thumbnail?id=1mcAYVjMi1rj1J0oUh1-ssXyBm4nCpNBE&sz=w800"
+    },
+    "stock": {
+      "Angra": {
+        "G": 3,
+        "M": 3,
+        "P": 2
+      },
+      "Pantera": {
+        "M": 3
+      },
+      "Paraty Blue": {
+        "G": 2,
+        "M": 2,
+        "P": 2
+      },
+      "Taípe": {
+        "G": 3,
+        "M": 3,
+        "P": 2
+      }
+    },
+    "d": "Millis Power Cortininha Com Regulador da Coleção Millis Power. Modelagem confortável e anatômica desenvolvida em tecido premium com proteção UV50+, secagem rápida e forro duplo de alta qualidade."
+  },
+  {
+    "id": "biq-light-0003",
+    "n": "Light Faixa De Alcinha",
+    "col": "Coleção Light",
+    "cat": "Biquínis",
+    "ref": "030 001 001 0003",
+    "pr": 299,
+    "img": "https://drive.google.com/thumbnail?id=1NoEbIXuLmmzpqFE4fcj2Zqwc0dLKNOds&sz=w800",
+    "tags": "coleção light light faixa de alcinha biquini calmaria",
+    "sizes": [
+      "P",
+      "M",
+      "G"
+    ],
+    "colors": [
+      [
+        "Calmaria",
+        "#e8d9c4"
+      ]
+    ],
+    "colorImgs": {
+      "Calmaria": "https://drive.google.com/thumbnail?id=1NoEbIXuLmmzpqFE4fcj2Zqwc0dLKNOds&sz=w800"
+    },
+    "stock": {
+      "Calmaria": {
+        "G": 2,
+        "M": 2,
+        "P": 2
+      }
+    },
+    "d": "Light Faixa De Alcinha da Coleção Light. Modelagem confortável e anatômica desenvolvida em tecido premium com proteção UV50+, secagem rápida e forro duplo de alta qualidade."
+  },
+  {
+    "id": "biq-light-0005",
+    "n": "Light Cortininha",
+    "col": "Coleção Light",
+    "cat": "Biquínis",
+    "ref": "030 001 001 0005",
+    "pr": 299,
+    "img": "https://drive.google.com/thumbnail?id=1xE1yruUe8KuobS518axRZOzvbqJa9y-p&sz=w800",
+    "tags": "coleção light light cortininha biquini oasis penca",
+    "sizes": [
+      "P"
+    ],
+    "colors": [
+      [
+        "Oasis",
+        "#3a3a40"
+      ],
+      [
+        "Penca",
+        "#c2603a"
+      ]
+    ],
+    "colorImgs": {
+      "Oasis": "https://drive.google.com/thumbnail?id=1xE1yruUe8KuobS518axRZOzvbqJa9y-p&sz=w800",
+      "Penca": "https://drive.google.com/thumbnail?id=1zuW2VzIRbjTvXJeEeATrLC0e69XVZc8J&sz=w800"
+    },
+    "stock": {
+      "Oasis": {
+        "P": 4
+      },
+      "Penca": {
+        "P": 1
+      }
+    },
+    "d": "Light Cortininha da Coleção Light. Modelagem confortável e anatômica desenvolvida em tecido premium com proteção UV50+, secagem rápida e forro duplo de alta qualidade."
+  },
+  {
+    "id": "biq-light-0012",
+    "n": "Light Com Regulador",
+    "col": "Coleção Light",
+    "cat": "Biquínis",
+    "ref": "030 001 001 0012",
+    "pr": 299,
+    "img": "https://drive.google.com/thumbnail?id=13aGq0qHY0iGstxcrpDRInNBiI3-hviT4&sz=w800",
+    "tags": "coleção light light com regulador biquini calmaria oasis penca",
+    "sizes": [
+      "P",
+      "M",
+      "G"
+    ],
+    "colors": [
+      [
+        "Calmaria",
+        "#e8d9c4"
+      ],
+      [
+        "Oasis",
+        "#3a3a40"
+      ],
+      [
+        "Penca",
+        "#c2603a"
+      ]
+    ],
+    "colorImgs": {
+      "Calmaria": "https://drive.google.com/thumbnail?id=13aGq0qHY0iGstxcrpDRInNBiI3-hviT4&sz=w800",
+      "Oasis": "https://drive.google.com/thumbnail?id=12hIzQrZOtnUb4mXUsL4mkWZJ-xFNIZcz&sz=w800",
+      "Penca": "https://drive.google.com/thumbnail?id=1_w-hc8OdpNFIkHjFiOuXNgavxPhk5avH&sz=w800"
+    },
+    "stock": {
+      "Calmaria": {
+        "G": 3,
+        "M": 3,
+        "P": 2
+      },
+      "Oasis": {
+        "G": 2,
+        "P": 2
+      },
+      "Penca": {
+        "G": 3,
+        "M": 3,
+        "P": 2
+      }
+    },
+    "d": "Light Com Regulador da Coleção Light. Modelagem confortável e anatômica desenvolvida em tecido premium com proteção UV50+, secagem rápida e forro duplo de alta qualidade."
+  },
+  {
+    "id": "biq-fluxy-0004",
+    "n": "Fluxy Push Up",
+    "col": "Coleção Fluxy",
+    "cat": "Biquínis",
+    "ref": "030 001 009 0004",
+    "pr": 319,
+    "img": "https://drive.google.com/thumbnail?id=1HGtjzpkmEP55PzFux-LNGHlnsWSSmIiJ&sz=w800",
+    "tags": "coleção fluxy fluxy push up biquini flora",
+    "sizes": [
+      "P",
+      "G",
+      "G1"
+    ],
+    "colors": [
+      [
+        "Flora",
+        "#7a885a"
+      ]
+    ],
+    "colorImgs": {
+      "Flora": "https://drive.google.com/thumbnail?id=1HGtjzpkmEP55PzFux-LNGHlnsWSSmIiJ&sz=w800"
+    },
+    "stock": {
+      "Flora": {
+        "G": 3,
+        "G1": 2,
+        "P": 3
+      }
+    },
+    "d": "Fluxy Push Up da Coleção Fluxy. Modelagem confortável e anatômica desenvolvida em tecido premium com proteção UV50+, secagem rápida e forro duplo de alta qualidade."
+  },
+  {
+    "id": "biq-fluxy-0002",
+    "n": "Fluxy Com Detalhe",
+    "col": "Coleção Fluxy",
+    "cat": "Biquínis",
+    "ref": "030 001 009 0002",
+    "pr": 319,
+    "img": "https://drive.google.com/thumbnail?id=1vdCkqAj9ho8dweaqXyWGN-Roti9c2HV2&sz=w800",
+    "tags": "coleção fluxy fluxy com detalhe biquini flora",
+    "sizes": [
+      "P",
+      "M",
+      "G",
+      "G1",
+      "G2"
+    ],
+    "colors": [
+      [
+        "Flora",
+        "#7a885a"
+      ]
+    ],
+    "colorImgs": {
+      "Flora": "https://drive.google.com/thumbnail?id=1vdCkqAj9ho8dweaqXyWGN-Roti9c2HV2&sz=w800"
+    },
+    "stock": {
+      "Flora": {
+        "G": 2,
+        "G1": 2,
+        "G2": 2,
+        "M": 2,
+        "P": 2
+      }
+    },
+    "d": "Fluxy Com Detalhe da Coleção Fluxy. Modelagem confortável e anatômica desenvolvida em tecido premium com proteção UV50+, secagem rápida e forro duplo de alta qualidade."
+  },
+  {
+    "id": "biq-fluxy-0006",
+    "n": "Fluxy Com Aviamento",
+    "col": "Coleção Fluxy",
+    "cat": "Biquínis",
+    "ref": "030 001 009 0006",
+    "pr": 319,
+    "img": "https://drive.google.com/thumbnail?id=1s9V5yKp8_gXGeaYaY3uQlGW3UgW2MVJ2&sz=w800",
+    "tags": "coleção fluxy fluxy com aviamento biquini flora",
+    "sizes": [
+      "M",
+      "G",
+      "G1"
+    ],
+    "colors": [
+      [
+        "Flora",
+        "#7a885a"
+      ]
+    ],
+    "colorImgs": {
+      "Flora": "https://drive.google.com/thumbnail?id=1s9V5yKp8_gXGeaYaY3uQlGW3UgW2MVJ2&sz=w800"
+    },
+    "stock": {
+      "Flora": {
+        "G": 2,
+        "G1": 2,
+        "M": 2
+      }
+    },
+    "d": "Fluxy Com Aviamento da Coleção Fluxy. Modelagem confortável e anatômica desenvolvida em tecido premium com proteção UV50+, secagem rápida e forro duplo de alta qualidade."
+  },
+  {
+    "id": "biq-fluxy-0012",
+    "n": "Fluxy Cortininha Com Regulador",
+    "col": "Coleção Fluxy",
+    "cat": "Biquínis",
+    "ref": "030 001 009 0012",
+    "pr": 319,
+    "img": "https://drive.google.com/thumbnail?id=15US0-M8NXDYI7FoazyuZd0vIXfkh7a6N&sz=w800",
+    "tags": "coleção fluxy fluxy cortininha com regulador biquini flora",
+    "sizes": [
+      "P",
+      "M",
+      "G"
+    ],
+    "colors": [
+      [
+        "Flora",
+        "#7a885a"
+      ]
+    ],
+    "colorImgs": {
+      "Flora": "https://drive.google.com/thumbnail?id=15US0-M8NXDYI7FoazyuZd0vIXfkh7a6N&sz=w800"
+    },
+    "stock": {
+      "Flora": {
+        "G": 3,
+        "M": 3,
+        "P": 2
+      }
+    },
+    "d": "Fluxy Cortininha Com Regulador da Coleção Fluxy. Modelagem confortável e anatômica desenvolvida em tecido premium com proteção UV50+, secagem rápida e forro duplo de alta qualidade."
+  },
+  {
+    "id": "biq-power-0002",
+    "n": "Millis Power Com Detalhe",
+    "col": "Coleção Millis Power",
+    "cat": "Biquínis",
+    "ref": "030 001 190 0002",
+    "pr": 339,
+    "img": "https://drive.google.com/thumbnail?id=1aF-ps8ZORhr6Hk8Ph2ywCBA7OAy6RSCG&sz=w800",
+    "tags": "coleção millis power millis power com detalhe biquini angra maraú mimosa turquesa paraty blue taípe",
+    "sizes": [
+      "P",
+      "M",
+      "G"
+    ],
+    "colors": [
+      [
+        "Angra",
+        "#5a7a9a"
+      ],
+      [
+        "Maraú",
+        "#2a3a52"
+      ],
+      [
+        "Mimosa Turquesa",
+        "#3aa898"
+      ],
+      [
+        "Paraty Blue",
+        "#4a6a88"
+      ],
+      [
+        "Taípe",
+        "#8c7b6d"
+      ]
+    ],
+    "colorImgs": {
+      "Angra": "https://drive.google.com/thumbnail?id=1aF-ps8ZORhr6Hk8Ph2ywCBA7OAy6RSCG&sz=w800",
+      "Maraú": "https://drive.google.com/thumbnail?id=1edi3bpyzPsGzwiaRLfas12OB1Hhcxc4L&sz=w800",
+      "Mimosa Turquesa": "https://drive.google.com/thumbnail?id=1ymQSwrvjL0PqqrsJ87W86TXS6a6KLiwv&sz=w800",
+      "Paraty Blue": "https://drive.google.com/thumbnail?id=1aEUuaezZ9iOSkGRloZEByh8IryCtBIdT&sz=w800",
+      "Taípe": "https://drive.google.com/thumbnail?id=1P2sI1WR4fAKFaKyVy--e4md_WNA_hjNF&sz=w800"
+    },
+    "stock": {
+      "Angra": {
+        "M": 2,
+        "P": 2
+      },
+      "Maraú": {
+        "M": 2,
+        "P": 2
+      },
+      "Mimosa Turquesa": {
+        "P": 2
+      },
+      "Paraty Blue": {
+        "P": 2
+      },
+      "Taípe": {
+        "G": 2,
+        "M": 2,
+        "P": 2
+      }
+    },
+    "d": "Millis Power Com Detalhe da Coleção Millis Power. Modelagem confortável e anatômica desenvolvida em tecido premium com proteção UV50+, secagem rápida e forro duplo de alta qualidade."
+  },
+  {
+    "id": "biq-power-0006",
+    "n": "Millis Power Com Aviamento",
+    "col": "Coleção Millis Power",
+    "cat": "Biquínis",
+    "ref": "030 001 190 0006",
+    "pr": 339,
+    "img": "https://drive.google.com/thumbnail?id=1aoNyqPVHmEb_qzw7PYpuGMzAbe2_dsU6&sz=w800",
+    "tags": "coleção millis power millis power com aviamento biquini maraú",
+    "sizes": [
+      "P",
+      "M",
+      "G",
+      "G1"
+    ],
+    "colors": [
+      [
+        "Maraú",
+        "#2a3a52"
+      ]
+    ],
+    "colorImgs": {
+      "Maraú": "https://drive.google.com/thumbnail?id=1aoNyqPVHmEb_qzw7PYpuGMzAbe2_dsU6&sz=w800"
+    },
+    "stock": {
+      "Maraú": {
+        "G": 3,
+        "G1": 1,
+        "M": 2,
+        "P": 3
+      }
+    },
+    "d": "Millis Power Com Aviamento da Coleção Millis Power. Modelagem confortável e anatômica desenvolvida em tecido premium com proteção UV50+, secagem rápida e forro duplo de alta qualidade."
+  },
+  {
+    "id": "maio-lycra-cavado",
+    "n": "Maiô Cavado Decote Halter",
+    "col": "Coleção Praia",
+    "cat": "Maiôs",
+    "pr": 449,
+    "img": "images/prod-m1.jpg?v=7",
+    "tags": "maio cavado decote halter costas nuas recorte frente unica body",
+    "badge": [
+      "pl",
+      "Ed. Limitada"
+    ],
+    "sizes": [
+      "P",
+      "M",
+      "G",
+      "GG"
+    ],
+    "colors": [
+      [
+        "Marrom",
+        "#6b4a2f"
+      ],
+      [
+        "Azul Marinho",
+        "#1a2a4a"
+      ],
+      [
+        "Preto",
+        "#1e1a16"
+      ]
+    ],
+    "d": "Maiô cavado com decote halter, recortes laterais e costas nuas. Modela a silhueta com elegância atemporal — da piscina ao pôr do sol."
+  },
+  {
+    "id": "maio-millis-decote",
+    "n": "Maiô Millis Power Decote V",
+    "col": "Coleção Millis Power",
+    "cat": "Maiôs",
+    "ref": "030 005 190 0054",
+    "pr": 469,
+    "img": "images/prod-m2.jpg?v=7",
+    "tags": "maio millis power decote v frente unica estampado body",
+    "sizes": [
+      "P",
+      "M",
+      "G",
+      "GG"
+    ],
+    "colors": [
+      [
+        "Oasis",
+        "#3a3a40"
+      ],
+      [
+        "Angra",
+        "#5a7a9a"
+      ],
+      [
+        "Maraú",
+        "#2a3a52"
+      ]
+    ],
+    "d": "Decote em V transpassado e alças cruzadas nas costas, na estampa exclusiva Millis Power. Sustentação total para curtir da praia ao jantar."
+  },
+  {
+    "id": "maio-carmel-cruzado",
+    "n": "Maiô Carmel Frente Cruzada",
+    "col": "Coleção Carmel",
+    "cat": "Maiôs",
+    "ref": "030 005 215 0056",
+    "pr": 459,
+    "img": "images/prod-m3.jpg?v=7",
+    "tags": "maio carmel frente cruzada bojo body",
+    "badge": [
+      "pn",
+      "Novo"
+    ],
+    "sizes": [
+      "P",
+      "M",
+      "G",
+      "GG"
+    ],
+    "colors": [
+      [
+        "Verde Bandeira",
+        "#1f6b4f"
+      ],
+      [
+        "Azul Jeans",
+        "#4a6a9a"
+      ]
+    ],
+    "d": "Maiô gola alta com frente cruzada e bojo embutido, em tecido texturizado Carmel. Cobertura generosa e caimento impecável."
+  },
+  {
+    "id": "vestido-fluxy-midi",
+    "n": "Vestido Fluxy Midi Transpassado c/ Cinto",
+    "col": "Coleção Fluxy",
+    "cat": "Saídas",
+    "ref": "030 010 009 0157",
+    "pr": 389,
+    "img": "images/prod-v1.jpg?v=7",
+    "tags": "vestido fluxy midi transpassado cinto saida",
+    "badge": [
+      "pl",
+      "Exclusivo"
+    ],
+    "sizes": [
+      "P",
+      "M",
+      "G",
+      "GG"
+    ],
+    "colors": [
+      [
+        "Oasis",
+        "#b5604a"
+      ]
+    ],
+    "d": "Vestido midi em viscose Fluxy de toque fluido, decote transpassado com argola e cinto que marca a cintura. Da praia ao pôr do sol sem trocar de look."
+  },
+  {
+    "id": "vestido-fluxy-fu",
+    "n": "Vestido Fluxy Frente Única",
+    "col": "Coleção Fluxy",
+    "cat": "Saídas",
+    "ref": "030 010 009 0158",
+    "pr": 369,
+    "img": "images/prod-v2.jpg?v=7",
+    "tags": "vestido fluxy frente unica longo saida",
+    "sizes": [
+      "P",
+      "M",
+      "G",
+      "GG"
+    ],
+    "colors": [
+      [
+        "Azul Marinho",
+        "#1a2a4a"
+      ],
+      [
+        "Preto",
+        "#1e1a16"
+      ],
+      [
+        "Verde Militar",
+        "#4a5a3a"
+      ]
+    ],
+    "d": "Vestido longo frente única com decote em V e costas nuas. Tecido Fluxy leve e fresco que acompanha o movimento. Elegância descomplicada."
+  },
+  {
+    "id": "saia-pareo",
+    "n": "Saia Pareo Microfibra Longa",
+    "col": "Coleção Praia",
+    "cat": "Saídas",
+    "ref": "030 006 003 0054",
+    "pr": 259,
+    "img": "images/prod-v3.jpg?v=7",
+    "tags": "saia pareo microfibra longa estampada saida",
+    "sizes": [
+      "Único"
+    ],
+    "colors": [
+      [
+        "Penca",
+        "#c2603a"
+      ]
+    ],
+    "d": "Pareô longo com fenda e amarração lateral em microfibra de secagem rápida. A saída de praia mais versátil — vire saia, vestido ou lenço."
+  },
+  {
+    "id": "calca-fluxy-pantalona",
+    "n": "Calça Fluxy Pantalona c/ Bolsos",
+    "col": "Coleção Fluxy",
+    "cat": "Saídas",
+    "ref": "030 013 009 0168",
+    "pr": 329,
+    "img": "images/prod-v4.jpg?v=7",
+    "tags": "calca fluxy pantalona bolsos saida",
+    "badge": [
+      "pn",
+      "Novo"
+    ],
+    "sizes": [
+      "P",
+      "M",
+      "G",
+      "GG"
+    ],
+    "colors": [
+      [
+        "Paraty Blue",
+        "#4a6a88"
+      ],
+      [
+        "Marrom",
+        "#6b4a2f"
+      ]
+    ],
+    "d": "Pantalona de cintura alta com cordão e bolsos, em viscose Fluxy. O coringa do guarda-roupa de verão — leve sobre o biquíni ou com regata."
+  },
+  {
+    "id": "ace-chapeu",
+    "n": "Chapéu de Praia Palha",
+    "col": "Curadoria Acquamar",
+    "cat": "Acessórios",
+    "ref": "030 030 017 0023",
+    "pr": 189,
+    "img": "images/prod-a1.jpg?v=7",
+    "tags": "chapeu praia palha acessorio",
+    "sizes": [
+      "Único"
+    ],
+    "colors": [
+      [
+        "Cru / Natural",
+        "#e0d4bc"
+      ]
+    ],
+    "d": "Chapéu de aba larga em palha trançada com fita preta. Proteção e estilo para os dias de sol — dobrável e fácil de levar na mala."
+  },
+  {
+    "id": "ace-bolsa-boho",
+    "n": "Bolsa Tiracolo Boho",
+    "col": "Curadoria Acquamar",
+    "cat": "Acessórios",
+    "ref": "030 025 017 0026",
+    "pr": 229,
+    "img": "images/prod-a2.jpg?v=7",
+    "tags": "bolsa tiracolo boho palha redonda acessorio",
+    "badge": [
+      "pn",
+      "Novo"
+    ],
+    "sizes": [
+      "Único"
+    ],
+    "colors": [
+      [
+        "Camelo",
+        "#c89a5a"
+      ],
+      [
+        "Bege",
+        "#d4c2a0"
+      ]
+    ],
+    "d": "Bolsa redonda de palha trançada à mão com alça regulável e fecho de borla. Cabe canga, protetor e o essencial para um dia perfeito de praia."
+  }
+]
