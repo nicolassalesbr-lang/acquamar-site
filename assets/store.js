@@ -476,6 +476,10 @@
     var nm = $('.pc-nm', card);
     return nm ? byName(nm.textContent) : null;
   }
+  // Liga cliques/sacola/favoritos/cores dos cards. Precisa rodar DEPOIS que o
+  // catálogo é carregado (fetch async) e que renderGrids() gera os cards — por
+  // isso é chamada em initSite(), não no topo do script.
+  function wireCards() {
   $$('.pc').forEach(function (card) {
     var p = cardProduct(card);
     if (!p) return;
@@ -509,6 +513,7 @@
       });
     });
   });
+  }
 
   /* ── Filtros (.fb) — funcionam na home e nas categorias ── */
   $$('.fb').forEach(function (b) {
@@ -636,6 +641,7 @@
   function initSite() {
     searchRender('');
     renderGrids();
+    wireCards();
     renderBadges();
     renderCart();
     renderWish();
