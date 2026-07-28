@@ -250,3 +250,25 @@
   }
 }
 
+
+
+/* Logo SVG Styling and Micro-animations */
+.logo-svg {
+  height: 54px; /* Desktop: Increase size from 38px to 54px */
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.3s ease;
+  filter: drop-shadow(0 2px 3px rgba(30, 26, 22, 0.04));
+}
+
+.logo-svg:hover {
+  transform: scale(1.06);
+  filter: drop-shadow(0 4px 8px rgba(30, 26, 22, 0.12));
+}
+
+@media (max-width: 768px) {
+  .logo-svg {
+    height: 44px; /* Mobile: Slightly smaller but still prominent */
+  }
+}

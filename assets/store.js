@@ -190,7 +190,7 @@
       (desc ? '<div class="acq-tot"><span>Desconto (ACQUA10)</span><span class="desc">−' + brl(desc) + '</span></div>' : '') +
       '<div class="acq-tot"><span>Frete</span><span>' + (sub >= FRETE_GRATIS ? 'Grátis' : 'calculado no checkout') + '</span></div>' +
       '<div class="acq-tot big"><span>Total</span><span>' + brl(total) + '</span></div>' +
-      '<a class="acq-btn wa" id="acqCheckout">Finalizar pedido · WhatsApp</a>' +
+      '<a class="acq-btn" id="acqCheckout">Finalizar compra</a>' +
       '<button class="acq-btn ghost" data-close2>Continuar comprando</button>';
 
     $$('[data-i]', body).forEach(function (b) { b.addEventListener('click', function () { cart[+b.getAttribute('data-i')].qty++; saveCart(); }); });
@@ -212,17 +212,42 @@
     var cupRm = $('#acqCupRm');
     if (cupRm) cupRm.addEventListener('click', function (e) { e.preventDefault(); coupon = null; store('acqua_coupon', null); renderCart(); });
 
-    $('#acqCheckout').addEventListener('click', function () {
+    // Monta a mensagem de WhatsApp (usada no fallback e no envio do comprovante)
+    function waMessage(payInfo) {
       var lines = cart.map(function (i) {
         var p = byId(i.id);
         return '• ' + i.qty + '× ' + p.n + ' (' + i.size + (i.color ? ', ' + i.color : '') + ') — ' + brl(p.pr * i.qty);
       });
-      var msg = 'Olá, Acquamar! Quero finalizar meu pedido:\n\n' + lines.join('\n') +
+      var msg = 'Olá, Acquamar! ' + (payInfo ? 'Acabei de finalizar e PAGAR meu pedido' : 'Quero finalizar meu pedido') + ':\n\n' + lines.join('\n') +
         '\n\nSubtotal: ' + brl(sub) +
         (desc ? '\nCupom ACQUA10: −' + brl(desc) : '') +
         '\nTotal: ' + brl(total) +
         (sub >= FRETE_GRATIS ? '\nFrete grátis 🎉' : '');
-      window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(msg), '_blank');
+      if (payInfo) {
+        var mm = { credit: 'Cartão de crédito', debit: 'Cartão de débito', pix: 'PIX', boleto: 'Boleto' };
+        msg += '\n\n✅ Pagamento: ' + (mm[payInfo.method] || payInfo.method) +
+          (payInfo.method === 'credit' && payInfo.installments > 1 ? ' em ' + payInfo.installments + 'x' : '') +
+          '\nPedido: ' + payInfo.orderId;
+      }
+      return msg;
+    }
+
+    $('#acqCheckout').addEventListener('click', function () {
+      // Painel de pagamento profissional (Sicoob). Fallback: WhatsApp direto.
+      if (window.AcquaPay && cart.length) {
+        var items = cart.map(function (i) {
+          var p = byId(i.id);
+          return { id: i.id, n: p.n, pr: p.pr, img: p.img, size: i.size, color: i.color, qty: i.qty };
+        });
+        closeLayer();
+        window.AcquaPay.open({ items: items, coupon: coupon || null }, {
+          onPaid: function () { cart.length = 0; coupon = null; store('acqua_coupon', null); saveCart(); },
+          onWhatsApp: function (info) { window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(waMessage(info)), '_blank'); },
+          onBackToCart: function () { openLayer($('#acqCart')); }
+        });
+        return;
+      }
+      window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(waMessage(null)), '_blank');
     });
     $('[data-close2]', foot).addEventListener('click', closeLayer);
   }
@@ -264,7 +289,7 @@
         '<button class="acq-rm" data-w="' + id + '" aria-label="Remover">×</button></div>';
     }).join('');
     $$('[data-add]', body).forEach(function (b) {
-      b.addEventListener('click', function () { openProduct(byId(b.getAttribute('data-add'))); });
+      b.addEventListener('click', function () { window.location.href = 'produto.html?id=' + b.getAttribute('data-add'); });
     });
     $$('[data-w]', body).forEach(function (b) {
       b.addEventListener('click', function () { toggleWish(b.getAttribute('data-w')); });
@@ -394,7 +419,7 @@
       return '<button class="acq-se-it" data-p="' + p.id + '"><img src="' + p.img + '" alt="' + p.n + '" loading="lazy"/><i>' + p.cat + '</i><b>' + p.n + '</b><s>' + brl(p.pr) + '</s></button>';
     }).join('');
     $$('[data-p]', res).forEach(function (b) {
-      b.addEventListener('click', function () { openProduct(byId(b.getAttribute('data-p'))); });
+      b.addEventListener('click', function () { window.location.href = 'produto.html?id=' + b.getAttribute('data-p'); });
     });
   }
   $('#acqSeIn').addEventListener('input', function () { searchRender(this.value); });
@@ -490,12 +515,12 @@
         el.style.cursor = 'pointer';
         el.addEventListener('click', function (e) {
           if (e.target.closest('.wish') || e.target.closest('.qadd')) return;
-          openProduct(p);
+          window.location.href = 'produto.html?id=' + p.id;
         });
       }
     });
     var qadd = $('.qadd', card);
-    if (qadd) qadd.addEventListener('click', function (e) { e.stopPropagation(); openProduct(p); });
+    if (qadd) qadd.addEventListener('click', function (e) { e.stopPropagation(); window.location.href = 'produto.html?id=' + p.id; });
     var w = $('.wish', card);
     if (w) w.addEventListener('click', function (e) {
       e.stopPropagation();

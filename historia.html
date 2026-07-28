@@ -20,11 +20,9 @@
       --ease:cubic-bezier(.22,1,.36,1);
     }
     html{scroll-behavior:smooth}
-    body{background:var(--creme);color:var(--escuro);font-family:var(--sans);font-weight:300;font-size:14px;line-height:1.65;overflow-x:hidden;cursor:none}
+    body{background:var(--creme);color:var(--escuro);font-family:var(--sans);font-weight:300;font-size:14px;line-height:1.65;overflow-x:hidden}
 
-    /* CURSOR */
-    #cur{width:9px;height:9px;background:var(--terra);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .35s var(--ease),height .35s var(--ease),opacity .3s;mix-blend-mode:multiply}
-    #cur.big{width:44px;height:44px;opacity:.2}
+    
 
     ::-webkit-scrollbar{width:3px}
     ::-webkit-scrollbar-track{background:var(--creme)}
@@ -324,15 +322,6 @@
       .benef-in{gap:20px}.ck{padding:20px}
     }
 
-    /* Restaurar cursor e ocultar elemento customizado em dispositivos touch */
-    @media (hover: none) and (pointer: coarse) {
-      body {
-        cursor: auto !important;
-      }
-      #cur {
-        display: none !important;
-      }
-    }
 
     /* ── MENU HAMBURGUER & DRAWER MOBILE ───────────────────── */
     .hamburger-btn {
@@ -570,9 +559,6 @@
   </div>
 </aside>
 
-<div id="cur"></div>
-
-
 <!-- ── Announcement ──────────────────────────────────────── -->
 <div class="ann">
   Frete grátis acima de R$&nbsp;399 <s>·</s> 10% OFF na primeira compra: ACQUA10 <s>·</s> 6× sem juros
@@ -594,7 +580,7 @@
       <a href="acessorios.html">Acessórios</a>
     </div>
     <a class="logo-w" href="index.html">
-      <img src="images/logo-acquamar.svg" alt="Acquamar Logo" class="logo-svg" style="height: 38px; width: auto; display: block; margin: 0 auto;">
+      <img src="images/logo-acquamar.svg" alt="Acquamar Logo" class="logo-svg">
     </a>
     <div class="nr">
       
@@ -705,12 +691,7 @@
 </div>
 
 <script>
-  const cur=document.getElementById('cur');
-  document.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px'});
-  document.querySelectorAll('a,button,.cat,.pc,.lk,.ig').forEach(el=>{
-    el.addEventListener('mouseenter',()=>cur.classList.add('big'));
-    el.addEventListener('mouseleave',()=>cur.classList.remove('big'));
-  });
+  
   const hdr=document.getElementById('hdr');
   window.addEventListener('scroll',()=>hdr.classList.toggle('up',scrollY>20),{passive:true});
   const obs=new IntersectionObserver(entries=>{

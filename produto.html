@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Acquamar — Produto Premium · Garopaba</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/store.css?v=8"/>
+  <link rel="stylesheet" href="assets/checkout.css?v=1"/>
+  <link rel="stylesheet" href="assets/shop.css?v=1"/>
+  <link rel="stylesheet" href="assets/mobile.css?v=8"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --terra:#c4693a;--terra-d:#a3522a;--terra-l:#e08860;
+      --areia:#e8d9c4;--areia-d:#d4c2a8;--areia-dd:#c4ae90;
+      --creme:#faf6f0;--marfim:#f5ede0;
+      --coral:#d9846a;--bege:#c9b394;--palha:#b8a07a;
+      --escuro:#1e1a16;--moca:#6b5442;
+      --serif:'Playfair Display',Georgia,serif;
+      --sans:'Jost',sans-serif;
+      --ease:cubic-bezier(.22,1,.36,1);
+    }
+    body{background:var(--creme);color:var(--escuro);font-family:var(--sans);font-weight:300;font-size:14px;line-height:1.65;overflow-x:hidden}
+    
+    /* PDP Wrapper */
+    .pdp-wrapper {
+      max-width: 1400px;
+      margin: 40px auto 96px;
+      padding: 0 52px;
+    }
+    
+    /* Breadcrumb */
+    .pdp-breadcrumb {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--bege);
+      margin-bottom: 30px;
+    }
+    .pdp-breadcrumb a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .pdp-breadcrumb a:hover {
+      color: var(--terra);
+    }
+    .pdp-breadcrumb span {
+      margin: 0 8px;
+      color: var(--areia-d);
+    }
+
+    .pdp-container {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 56px;
+      align-items: start;
+    }
+    
+    /* Gallery */
+    .pdp-gallery-w {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 16px;
+      position: sticky;
+      top: 110px;
+    }
+    .pdp-thumbs {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .pdp-thumb {
+      width: 80px;
+      height: 106px;
+      border: 1px solid var(--areia-d);
+      cursor: pointer;
+      opacity: 0.6;
+      transition: all 0.25s var(--ease);
+      overflow: hidden;
+      background: var(--marfim);
+      position: relative;
+    }
+    .pdp-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .pdp-thumb.active, .pdp-thumb:hover {
+      opacity: 1;
+      border-color: var(--escuro);
+    }
+    
+    .pdp-main-img-w {
+      position: relative;
+      background: var(--marfim);
+      border: 1px solid var(--areia-d);
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+    .pdp-main-img-w img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s var(--ease);
+    }
+    .pdp-main-img-w:hover img {
+      transform: scale(1.05);
+    }
+    
+    .pbdg {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      font-weight: 500;
+      font-family: var(--sans);
+      color: #fff;
+      z-index: 10;
+    }
+    .pbdg.pn { background: var(--terra); }
+    .pbdg.pl { background: var(--escuro); }
+    
+    /* Info Panel */
+    .pdp-info {
+      position: sticky;
+      top: 110px;
+    }
+    .pdp-col {
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--terra);
+      display: block;
+      margin-bottom: 12px;
+    }
+    .pdp-n {
+      font-family: var(--serif);
+      font-size: 36px;
+      font-weight: 300;
+      color: var(--escuro);
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+    .pdp-ref {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      color: var(--bege);
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .pdp-p {
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--escuro);
+      margin-bottom: 8px;
+    }
+    .pdp-p .old {
+      text-decoration: line-through;
+      color: var(--bege);
+      font-size: 16px;
+      margin-right: 12px;
+      font-weight: 300;
+    }
+    .pdp-installments {
+      font-size: 12px;
+      color: var(--moca);
+      margin-bottom: 30px;
+    }
+    
+    .pdp-desc {
+      font-size: 13.5px;
+      color: var(--moca);
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+    
+    .acq-lbl {
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--escuro);
+      margin-bottom: 10px;
+      display: block;
+      font-weight: 500;
+    }
+    .pdp-colors {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .dot {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s;
+      outline-offset: -3px;
+    }
+    .dot:hover, .dot.on {
+      border-color: var(--escuro);
+      outline: 2px solid #fff;
+    }
+    
+    .pdp-sizes {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+    .acq-sz {
+      min-width: 48px;
+      height: 44px;
+      padding: 0 14px;
+      border: 1px solid var(--areia-d);
+      background: transparent;
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: var(--escuro);
+      cursor: pointer;
+      transition: all 0.2s var(--ease);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .acq-sz:hover {
+      border-color: var(--escuro);
+    }
+    .acq-sz.on {
+      background: var(--escuro);
+      color: #fff;
+      border-color: var(--escuro);
+    }
+    .acq-sz.disabled {
+      opacity: 0.3;
+      pointer-events: none;
+      text-decoration: line-through;
+    }
+    .pdp-sizes-w.err .pdp-sizes {
+      animation: acqshake .3s;
+    }
+    .pdp-sizes-w.err .acq-sz {
+      border-color: #b04a3a;
+    }
+    
+    .pdp-actions {
+      display: flex;
+      gap: 14px;
+      align-items: stretch;
+      margin-bottom: 32px;
+    }
+    .pdp-actions .acq-qty {
+      margin: 0;
+      height: 52px;
+      background: #fff;
+    }
+    .pdp-actions .acq-qty button {
+      width: 36px;
+      height: 50px;
+    }
+    .pdp-actions .acq-qty span {
+      min-width: 36px;
+    }
+    .pdp-actions .acq-btn {
+      flex: 1;
+      margin: 0;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .pdp-wish-btn {
+      width: 52px;
+      height: 52px;
+      border: 1px solid var(--areia-d);
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s var(--ease);
+    }
+    .pdp-wish-btn:hover {
+      border-color: var(--terra);
+    }
+    .pdp-wish-btn svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--escuro);
+      fill: none;
+      stroke-width: 1.5;
+      transition: all 0.2s;
+    }
+    .pdp-wish-btn.on svg {
+      fill: var(--terra);
+      stroke: var(--terra);
+    }
+    
+    .pdp-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      border-bottom: 1px solid var(--areia-d);
+      padding-bottom: 32px;
+      margin-bottom: 12px;
+    }
+    .pdp-links a {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--moca);
+      text-decoration: none;
+      border-bottom: 1px solid var(--areia-d);
+      padding-bottom: 2px;
+      transition: color 0.2s;
+    }
+    .pdp-links a:hover {
+      color: var(--terra);
+      border-color: var(--terra);
+    }
+    
+    /* Accordion Panels */
+    .pdp-accordions {
+      display: flex;
+      flex-direction: column;
+    }
+    .pdp-acc {
+      border-bottom: 1px solid rgba(212,194,168,.45);
+    }
+    .pdp-acc summary {
+      padding: 18px 0;
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--escuro);
+      font-weight: 500;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+    .pdp-acc summary::after {
+      content: '+';
+      font-size: 16px;
+      color: var(--terra);
+      font-weight: 300;
+    }
+    .pdp-acc[open] summary::after {
+      content: '–';
+    }
+    .pdp-acc-content {
+      padding: 0 0 20px;
+      font-size: 13px;
+      color: var(--moca);
+      line-height: 1.75;
+    }
+    .pdp-acc-content p {
+      margin-bottom: 10px;
+    }
+    .pdp-acc-content p:last-child {
+      margin-bottom: 0;
+    }
+    .pdp-acc-content ul {
+      padding-left: 18px;
+      margin-top: 6px;
+    }
+    .pdp-acc-content ul li {
+      margin-bottom: 4px;
+    }
+    
+    /* Crop overrides */
+    .pdp-main-img-w.crop-grid img, .pdp-thumb.crop-grid img {
+      width: 215% !important;
+      height: 215% !important;
+      max-width: none !important;
+      position: absolute !important;
+      top: -10% !important;
+      left: -5% !important;
+    }
+
+    /* HEADER UP STATE */
+    header{position:sticky;top:0;z-index:200;background:var(--creme);transition:box-shadow .4s}
+    header.up{box-shadow:0 2px 40px rgba(30,26,22,.08)}
+    nav{max-width:1600px;margin:0 auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 52px;height:76px}
+    .nl2{display:flex;gap:36px;align-items:center}
+    .nl2 a,.nr a{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--escuro);text-decoration:none;font-weight:400;position:relative;transition:color .25s}
+    .nl2 a::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;background:var(--terra);transition:width .35s var(--ease)}
+    .nl2 a:hover::after{width:100%}.nl2 a:hover{color:var(--terra)}
+    .logo-w{text-align:center;text-decoration:none;display:block}
+    .logo-img{height:42px;width:auto;object-fit:contain;margin-left:auto;margin-right:24px;display:block;opacity:.85;transition:opacity .3s}
+    .logo-img:hover{opacity:1}
+    .nr{display:flex;gap:28px;align-items:center;justify-content:flex-end}
+    .ib{display:flex;align-items:center;text-decoration:none;color:var(--escuro);transition:color .2s;position:relative}
+    .ib:hover{color:var(--terra)}
+    .ib svg{width:23px;height:23px;stroke:currentColor;fill:none;stroke-width:1.5}
+    .bdg{background:var(--terra);color:#fff;font-size:9px;width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:500;position:absolute;top:-7px;right:-7px}
+
+    @media (max-width: 1024px) {
+      .pdp-wrapper {
+        padding: 0 24px;
+      }
+      .pdp-container {
+        gap: 36px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hamburger-btn {
+        display: flex;
+      }
+      nav {
+        grid-template-columns: 1fr auto 1fr !important;
+        padding: 0 20px;
+      }
+      .logo-w {
+        grid-column: 2;
+      }
+      .nr {
+        grid-column: 3;
+      }
+      .nl2 {
+        display: none;
+      }
+      
+      .pdp-wrapper {
+        margin-top: 16px;
+        padding: 0 16px;
+      }
+      .pdp-container {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .pdp-gallery-w {
+        grid-template-columns: 1fr;
+        position: static;
+      }
+      .pdp-thumbs {
+        flex-direction: row;
+        order: 2;
+        overflow-x: auto;
+        padding-bottom: 8px;
+      }
+      .pdp-thumb {
+        flex: 0 0 64px;
+        height: 85px;
+      }
+      .pdp-main-img-w {
+        order: 1;
+      }
+      .pdp-info {
+        position: static;
+      }
+      .pdp-n {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Drawer Mobile -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-header">
+    <span class="drawer-title">Navegação</span>
+    <button class="drawer-close" id="drawerClose" aria-label="Fechar Menu">&times;</button>
+  </div>
+  <nav class="drawer-nav">
+    <a href="index.html" class="drawer-link" id="link-home">Coleção <span>→</span></a>
+    <a href="biquinis.html" class="drawer-link" id="link-biquinis">Biquínis <span>→</span></a>
+    <a href="maios.html" class="drawer-link" id="link-maios">Maiôs &amp; Bodies <span>→</span></a>
+    <a href="saidas.html" class="drawer-link" id="link-saidas">Saídas de Praia <span>→</span></a>
+    <a href="acessorios.html" class="drawer-link" id="link-acessorios">Acessórios <span>→</span></a>
+    <div class="drawer-divider"></div>
+    <a href="guia-medidas.html" class="drawer-link" id="link-guia">Guia de Medidas <span>→</span></a>
+    <a href="historia.html" class="drawer-link" id="link-historia">Nossa História <span>→</span></a>
+  </nav>
+  <div class="drawer-footer">
+    <div class="drawer-social">
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+      <a href="https://wa.me/5548000000000" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
+    </div>
+    <p>&copy; 2026 Acquamar · Garopaba · SC</p>
+  </div>
+</aside>
+
+<!-- Announcement Banner -->
+<div class="ann">
+  Frete grátis acima de R$&nbsp;399 <s>·</s> 10% OFF na primeira compra: ACQUA10 <s>·</s> 6× sem juros
+</div>
+
+<!-- Header -->
+<header id="hdr">
+  <nav>
+    <button class="hamburger-btn" id="mburger" aria-label="Abrir Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nl2">
+      <a href="index.html">Coleção</a>
+      <a href="biquinis.html">Biquínis</a>
+      <a href="maios.html">Maiôs</a>
+      <a href="saidas.html">Saídas</a>
+      <a href="acessorios.html">Acessórios</a>
+    </div>
+    <a class="logo-w" href="index.html">
+      <img src="images/logo-acquamar.svg" alt="Acquamar Logo" class="logo-svg">
+    </a>
+    <div class="nr">
+      <a class="ib" href="#" aria-label="Buscar"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg></a>
+      <a class="ib" href="#" aria-label="Favoritos"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></a>
+      <a class="ib" href="#" aria-label="Sacola" style="position:relative">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="bdg"></span>
+      </a>
+    </div>
+  </nav>
+</header>
+
+<!-- Product Detail Page Wrapper -->
+<div class="pdp-wrapper">
+  <!-- Breadcrumb -->
+  <div class="pdp-breadcrumb">
+    <a href="index.html">Início</a><span>/</span>
+    <a href="#" id="breadcrumb-cat">Categoria</a><span>/</span>
+    <span id="breadcrumb-prod" style="color: var(--escuro)">Carregando...</span>
+  </div>
+  
+  <div class="pdp-container">
+    <!-- Left Column: Gallery -->
+    <div class="pdp-gallery-w">
+      <div class="pdp-thumbs" id="pdp-thumbs">
+        <!-- Injected dynamically -->
+      </div>
+      <div class="pdp-main-img-w" id="pdp-main-img-w">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+    
+    <!-- Right Column: Info & Purchase panel -->
+    <div class="pdp-info">
+      <span class="pdp-col" id="pdp-col">Coleção</span>
+      <h1 class="pdp-n" id="pdp-n">Nome do Produto</h1>
+      <p class="pdp-ref" id="pdp-ref">REF: 000 000 000 000</p>
+      
+      <div class="pdp-p" id="pdp-p">R$ 0,00</div>
+      <div class="pdp-installments" id="pdp-installments">ou 6x de R$ 0,00 sem juros</div>
+      
+      <p class="pdp-desc" id="pdp-desc">Descrição do produto.</p>
+      
+      <div style="border-top: 1px solid var(--areia-d); padding-top: 28px; margin-top: 28px;">
+        <span class="acq-lbl">Cor: <span id="pdp-color-name" style="color: var(--moca)">Cor</span></span>
+        <div class="pdp-colors" id="pdp-colors">
+          <!-- Injected dynamically -->
+        </div>
+        
+        <div class="pdp-sizes-w" id="pdp-sizes-w">
+          <!-- Injected dynamically -->
+        </div>
+        
+        <div class="pdp-actions">
+          <div class="acq-qty">
+            <button id="pdp-qty-minus">−</button>
+            <span id="pdp-qty-val">1</span>
+            <button id="pdp-qty-plus">+</button>
+          </div>
+          <button class="acq-btn" id="pdp-add-btn">Adicionar à Sacola</button>
+          <button class="pdp-wish-btn" id="pdp-wish-btn" aria-label="Favoritar">
+            <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+        
+        <div class="pdp-links">
+          <a href="guia-medidas.html">Guia de medidas</a>
+          <a href="#" id="pdp-wa-link" target="_blank" rel="noopener">Tirar dúvida no WhatsApp</a>
+        </div>
+        
+        <!-- Accordion details (Collapsible) -->
+        <div class="pdp-accordions">
+          <details class="pdp-acc" open>
+            <summary>Descrição Detalhada</summary>
+            <div class="pdp-acc-content">
+              <p>Modelagem anatômica desenvolvida para valorizar a silhueta com extremo conforto. Ideal tanto para o mar quanto para compor looks casuais com calças ou saídas.</p>
+              <p>Acabamentos nobres, costura invisível e aviamentos de alta qualidade com banho especial resistente à corrosão por cloro e sal.</p>
+            </div>
+          </details>
+          <details class="pdp-acc">
+            <summary>Composição &amp; Proteção UV</summary>
+            <div class="pdp-acc-content">
+              <p><strong>Composição:</strong> 84% Poliamida, 16% Elastano.</p>
+              <p><strong>Forro premium:</strong> 88% Poliamida, 12% Elastano.</p>
+              <p>Tecnologia com <strong>Proteção UV50+</strong> que bloqueia a radiação solar prejudicial na pele, secagem ultrarrápida e elasticidade de alta memória.</p>
+            </div>
+          </details>
+          <details class="pdp-acc">
+            <summary>Instruções de Lavagem</summary>
+            <div class="pdp-acc-content">
+              <p>Para maior durabilidade das suas peças premium Acquamar:</p>
+              <ul>
+                <li>Lavar à mão imediatamente após o uso com sabão neutro e água fria.</li>
+                <li>Não lavar na máquina, não centrifugar nem usar secadora.</li>
+                <li>Secar à sombra, em local ventilado e de preferência na horizontal.</li>
+                <li>Evitar contato direto com superfícies ásperas para não desfiar as fibras.</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="ft-in">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <span class="logo-n">Acquamar</span>
+        <span class="logo-c" style="display:block;margin-top:4px">Garopaba · SC · Brasil</span>
+        <p>Moda praia premium com origem real. Cada peça nasce em Garopaba e carrega o melhor do verão catarinense.</p>
+        <div class="soc">
+          <a href="#"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+          <a href="#"><svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg></a>
+          <a href="#"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.78 1.22-5.17 1.22-5.17s-.31-.62-.31-1.54c0-1.45.84-2.53 1.88-2.53.89 0 1.32.67 1.32 1.47 0 .89-.57 2.23-.86 3.47-.25 1.04.51 1.88 1.53 1.88 1.83 0 3.24-1.93 3.24-4.72 0-2.47-1.78-4.2-4.31-4.2-2.94 0-4.66 2.2-4.66 4.48 0 .89.34 1.84.77 2.36a.31.31 0 01.07.3l-.29 1.17c-.05.19-.16.23-.37.14C5.47 15.41 4.5 13.5 4.5 12c0-3.87 2.81-7.43 8.1-7.43 4.25 0 7.55 3.03 7.55 7.07 0 4.22-2.66 7.61-6.35 7.61-1.24 0-2.41-.65-2.81-1.41l-.76 2.85c-.28 1.06-1.02 2.39-1.52 3.2C10.3 21.95 11.14 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg></a>
+        </div>
+      </div>
+      <div class="fc"><h4>Coleções</h4><ul><li><a href="biquinis.html">Biquínis</a></li><li><a href="maios.html">Maiôs &amp; Bodies</a></li><li><a href="saidas.html">Saídas de praia</a></li><li><a href="acessorios.html">Acessórios</a></li><li><a href="biquinis.html">Conjuntos</a></li><li><a href="index.html#produtos">Lançamentos</a></li></ul></div>
+      <div class="fc"><h4>Ajuda</h4><ul><li><a href="guia-medidas.html">Guia de medidas</a></li><li><a href="#">Trocas e devoluções</a></li><li><a href="#">Rastrear pedido</a></li><li><a href="#">FAQ</a></li><li><a href="https://wa.me/5548000000000" target="_blank">WhatsApp</a></li></ul></div>
+      <div class="fc"><h4>A Acquamar</h4><ul><li><a href="historia.html">Nossa história</a></li><li><a href="#">Loja · Garopaba</a></li><li><a href="#">Política de privacidade</a></li><li><a href="#">Termos de uso</a></li><li><a href="#">Trabalhe conosco</a></li></ul></div>
+    </div>
+    <div class="ft-bot">
+      <p>© 2026 Acquamar Moda Praia · Todos os direitos reservados · CNPJ 00.000.000/0001-00</p>
+      <div class="pay"><span>Visa</span><span>Master</span><span>Pix</span><span>Amex</span><span>Boleto</span></div>
+    </div>
+  </div>
+</footer>
+
+<!-- FAB WhatsApp -->
+<a class="fab" href="https://wa.me/5548000000000" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<!-- Cookie -->
+<div class="ck" id="ck">
+  <p class="ck-p">Usamos cookies para melhorar sua experiência. Veja nossa <a href="#">Política de Privacidade</a>.</p>
+  <div class="ck-a">
+    <button class="ck-no" id="ckno">Recusar opcionais</button>
+    <button class="ck-ok" id="ckok">Aceitar todos</button>
+  </div>
+</div>
+
+<script>
+  const hdr=document.getElementById('hdr');
+  window.addEventListener('scroll',()=>hdr.classList.toggle('up',scrollY>20),{passive:true});
+  
+  // Mobile drawer logic
+  const mburger = document.getElementById('mburger');
+  const drawer = document.getElementById('drawer');
+  const drawerOverlay = document.getElementById('drawerOverlay');
+  const drawerClose = document.getElementById('drawerClose');
+  
+  if (mburger && drawer && drawerOverlay && drawerClose) {
+    mburger.addEventListener('click', () => {
+      drawer.classList.add('open');
+      drawerOverlay.classList.add('open');
+    });
+    
+    const closeDrawer = () => {
+      drawer.classList.remove('open');
+      drawerOverlay.classList.remove('open');
+    };
+    
+    drawerClose.addEventListener('click', closeDrawer);
+    drawerOverlay.addEventListener('click', closeDrawer);
+  }
+
+  // Formatting helpers
+  function brl(v) { return v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); }
+  function mURL(u) {
+    if (u.indexOf('drive.google.com/thumbnail') !== -1) {
+      return u.replace('sz=w800', 'sz=w400');
+    }
+    return u.replace('.jpg', '-m.jpg');
+  }
+  function imgTag(p, src, lazy, style) {
+    const IMG_STYLE = 'width:100%;height:100%;object-fit:cover;position:absolute;inset:0;z-index:0';
+    src = src || p.img; style = style || IMG_STYLE;
+    var img = '<img src="' + src + '" alt="' + p.n + '"' + (lazy ? ' loading="lazy"' : '') + ' style="' + style + '">';
+    return p.mob
+      ? '<picture><source media="(max-width:768px)" srcset="' + mURL(src) + '">' + img + '</picture>'
+      : img;
+  }
+  
+  // Render PDP
+  function renderProductPage(p) {
+    document.title = p.n + " — Acquamar Garopaba";
+    document.querySelector('#breadcrumb-prod').textContent = p.n;
+    
+    const catNode = document.querySelector('#breadcrumb-cat');
+    catNode.textContent = p.cat;
+    catNode.href = p.cat.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/o$/, 'os').replace(/i$/, 'is') + '.html';
+    
+    document.querySelector('#pdp-col').textContent = p.col;
+    document.querySelector('#pdp-n').textContent = p.n;
+    document.querySelector('#pdp-ref').textContent = 'REF: ' + (p.ref || '000000000000');
+    
+    const priceHtml = (p.old ? `<span class="old">${brl(p.old)}</span>` : '') + brl(p.pr);
+    document.querySelector('#pdp-p').innerHTML = priceHtml;
+    
+    const instVal = brl(p.pr / 6);
+    document.querySelector('#pdp-installments').textContent = `ou 6x de ${instVal} sem juros`;
+    document.querySelector('#pdp-desc').textContent = p.d;
+    
+    let selectedColor = p.colors[0][0];
+    let getSelectedSize = () => null;
+    
+    function renderSizes(color) {
+      const sizes = p.sizes || ['P', 'M', 'G', 'GG'];
+      let selectedSize = null;
+      const sizesHtml = sizes.map(s => {
+        let inStock = true;
+        if (p.stock && p.stock[color]) {
+          inStock = p.stock[color][s] !== undefined && p.stock[color][s] > 0;
+        }
+        const disClass = inStock ? '' : ' disabled';
+        const disAttr = inStock ? '' : ' disabled';
+        return `<button class="acq-sz${disClass}" data-sz="${s}" ${disAttr}>${s}</button>`;
+      }).join('');
+      
+      const sizesW = document.querySelector('#pdp-sizes-w');
+      sizesW.innerHTML = `<span class="acq-lbl">Tamanho</span><div class="pdp-sizes">${sizesHtml}</div>`;
+      
+      document.querySelectorAll('.acq-sz').forEach(btn => {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.acq-sz').forEach(b => b.classList.remove('on'));
+          btn.classList.add('on');
+          selectedSize = btn.getAttribute('data-sz');
+          sizesW.classList.remove('err');
+        });
+      });
+      return () => selectedSize;
+    }
+    
+    getSelectedSize = renderSizes(selectedColor);
+    
+    // Set color dots
+    const colorsHtml = p.colors.map((c, i) => {
+      const border = c[1] === '#e8d9c4' || c[1] === '#faf6f0' ? ';border:1px solid #c8b99a' : '';
+      return `<div class="dot${i === 0 ? ' on' : ''}" data-cor="${c[0]}" style="background:${c[1]}${border}" title="${c[0]}"></div>`;
+    }).join('');
+    document.querySelector('#pdp-colors').innerHTML = colorsHtml;
+    document.querySelector('#pdp-color-name').textContent = selectedColor;
+    
+    // Main image & gallery
+    const mainImgW = document.querySelector('#pdp-main-img-w');
+    mainImgW.className = 'pdp-main-img-w' + ((p.id === 'biq-fluxy-0006' || p.id === 'biq-fluxy-0012') ? ' crop-grid' : '');
+    
+    function updateImages(mainUrl) {
+      mainImgW.innerHTML = imgTag(p, mainUrl, false) + (p.badge ? `<span class="pbdg ${p.badge[0]}">${p.badge[1]}</span>` : '');
+      
+      const imageUrls = [p.img];
+      if (p.colorImgs) {
+        Object.values(p.colorImgs).forEach(url => {
+          if (!imageUrls.includes(url)) imageUrls.push(url);
+        });
+      }
+      
+      const thumbsHtml = imageUrls.map(url => {
+        const activeClass = url === mainUrl ? ' active' : '';
+        const cropClass = (p.id === 'biq-fluxy-0006' || p.id === 'biq-fluxy-0012') ? ' crop-grid' : '';
+        return `<div class="pdp-thumb${activeClass}${cropClass}"><img src="${url}" alt="${p.n}"/></div>`;
+      }).join('');
+      
+      document.querySelector('#pdp-thumbs').innerHTML = thumbsHtml;
+      
+      document.querySelectorAll('.pdp-thumb').forEach((thumb, idx) => {
+        thumb.addEventListener('click', function() {
+          document.querySelectorAll('.pdp-thumb').forEach(t => t.classList.remove('active'));
+          thumb.classList.add('active');
+          updateImages(imageUrls[idx]);
+        });
+      });
+    }
+    
+    updateImages(p.img);
+    
+    // Wire color dots clicks
+    document.querySelectorAll('#pdp-colors .dot').forEach(dot => {
+      dot.addEventListener('click', function () {
+        document.querySelectorAll('#pdp-colors .dot').forEach(d => d.classList.remove('on'));
+        dot.classList.add('on');
+        selectedColor = dot.getAttribute('data-cor');
+        document.querySelector('#pdp-color-name').textContent = selectedColor;
+        
+        getSelectedSize = renderSizes(selectedColor);
+        
+        const colorUrl = p.colorImgs && p.colorImgs[selectedColor];
+        if (colorUrl) {
+          updateImages(colorUrl);
+        }
+      });
+    });
+    
+    // Qty selector
+    let qty = 1;
+    const qtySpan = document.querySelector('#pdp-qty-val');
+    document.querySelector('#pdp-qty-minus').addEventListener('click', function () {
+      if (qty > 1) {
+        qty--;
+        qtySpan.textContent = qty;
+      }
+    });
+    document.querySelector('#pdp-qty-plus').addEventListener('click', function () {
+      qty++;
+      qtySpan.textContent = qty;
+    });
+    
+    // Actions Buy & Wish
+    document.querySelector('#pdp-add-btn').addEventListener('click', function () {
+      const size = getSelectedSize();
+      if (!size) {
+        document.querySelector('#pdp-sizes-w').classList.add('err');
+        return;
+      }
+      if (window.addToCart) {
+        window.addToCart(p.id, size, selectedColor, qty);
+        window.bagPop(p);
+      }
+    });
+    
+    const wishBtn = document.querySelector('#pdp-wish-btn');
+    wishBtn.classList.toggle('on', window.inWish && window.inWish(p.id));
+    wishBtn.addEventListener('click', function () {
+      if (window.toggleWish) {
+        window.toggleWish(p.id);
+        wishBtn.classList.toggle('on', window.inWish && window.inWish(p.id));
+      }
+    });
+    
+    document.querySelector('#pdp-wa-link').href = `https://wa.me/5548000000000?text=${encodeURIComponent('Olá! Tenho uma dúvida sobre o produto: ' + p.n + ' (REF: ' + (p.ref || '') + ')')}`;
+  }
+  
+  // Dynamic product loading
+  document.addEventListener('DOMContentLoaded', function () {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    if (!id) {
+      window.location.href = 'index.html';
+      return;
+    }
+    
+    fetch('assets/catalog.json?v=' + Date.now())
+      .then(r => r.json())
+      .then(catalog => {
+        const p = catalog.find(x => x.id === id);
+        if (!p) {
+          window.location.href = 'index.html';
+          return;
+        }
+        renderProductPage(p);
+      })
+      .catch(err => {
+        console.error('Error loading product:', err);
+      });
+  });
+</script>
+<script src="assets/store.js?v=8"></script>
+<script src="assets/checkout.js?v=1"></script>
+<script src="assets/shop.js?v=1"></script>
+</body>
+</html>
