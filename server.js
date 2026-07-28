@@ -453,7 +453,7 @@ app.use('/images/uploads', express.static(uploadDir));
 // Serve static assets
 app.use(express.static(path.join(__dirname, 'public'), {
     setHeaders: function (res, filepath) {
-        if (filepath.endswith('.html') || filepath.endswith('.js') || filepath.endswith('.css')) {
+        if (/\.(html|js|css)$/i.test(filepath)) {
             res.set('Cache-Control', 'no-cache, must-revalidate');
         }
     }
